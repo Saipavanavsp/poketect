@@ -1,0 +1,7205 @@
+[
+ {
+  "id": 1,
+  "chain": {
+   "species": "bulbasaur",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "ivysaur",
+     "condition": "Level 16",
+     "evolves_to": [
+      {
+       "species": "venusaur",
+       "condition": "Level 32",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 2,
+  "chain": {
+   "species": "charmander",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "charmeleon",
+     "condition": "Level 16",
+     "evolves_to": [
+      {
+       "species": "charizard",
+       "condition": "Level 36",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 3,
+  "chain": {
+   "species": "squirtle",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "wartortle",
+     "condition": "Level 16",
+     "evolves_to": [
+      {
+       "species": "blastoise",
+       "condition": "Level 36",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 4,
+  "chain": {
+   "species": "caterpie",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "metapod",
+     "condition": "Level 7",
+     "evolves_to": [
+      {
+       "species": "butterfree",
+       "condition": "Level 10",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 5,
+  "chain": {
+   "species": "weedle",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "kakuna",
+     "condition": "Level 7",
+     "evolves_to": [
+      {
+       "species": "beedrill",
+       "condition": "Level 10",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 6,
+  "chain": {
+   "species": "pidgey",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "pidgeotto",
+     "condition": "Level 18",
+     "evolves_to": [
+      {
+       "species": "pidgeot",
+       "condition": "Level 36",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 7,
+  "chain": {
+   "species": "rattata",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "raticate",
+     "condition": "Level 20 (night)",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 8,
+  "chain": {
+   "species": "spearow",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "fearow",
+     "condition": "Level 20",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 9,
+  "chain": {
+   "species": "ekans",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "arbok",
+     "condition": "Level 22",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 10,
+  "chain": {
+   "species": "pichu",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "pikachu",
+     "condition": "Level up high friendship",
+     "evolves_to": [
+      {
+       "species": "raichu",
+       "condition": "Use Thunder Stone",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 11,
+  "chain": {
+   "species": "sandshrew",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "sandslash",
+     "condition": "Use Ice Stone",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 12,
+  "chain": {
+   "species": "nidoran-f",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "nidorina",
+     "condition": "Level 16",
+     "evolves_to": [
+      {
+       "species": "nidoqueen",
+       "condition": "Use Moon Stone",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 13,
+  "chain": {
+   "species": "nidoran-m",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "nidorino",
+     "condition": "Level 16",
+     "evolves_to": [
+      {
+       "species": "nidoking",
+       "condition": "Use Moon Stone",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 14,
+  "chain": {
+   "species": "cleffa",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "clefairy",
+     "condition": "Level up high friendship",
+     "evolves_to": [
+      {
+       "species": "clefable",
+       "condition": "Use Moon Stone",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 15,
+  "chain": {
+   "species": "vulpix",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "ninetales",
+     "condition": "Use Ice Stone",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 16,
+  "chain": {
+   "species": "igglybuff",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "jigglypuff",
+     "condition": "Level up high friendship",
+     "evolves_to": [
+      {
+       "species": "wigglytuff",
+       "condition": "Use Moon Stone",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 17,
+  "chain": {
+   "species": "zubat",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "golbat",
+     "condition": "Level 22",
+     "evolves_to": [
+      {
+       "species": "crobat",
+       "condition": "Level up high friendship",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 18,
+  "chain": {
+   "species": "oddish",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "gloom",
+     "condition": "Level 21",
+     "evolves_to": [
+      {
+       "species": "vileplume",
+       "condition": "Use Leaf Stone",
+       "evolves_to": []
+      },
+      {
+       "species": "bellossom",
+       "condition": "Use Sun Stone",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 19,
+  "chain": {
+   "species": "paras",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "parasect",
+     "condition": "Level 24",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 20,
+  "chain": {
+   "species": "venonat",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "venomoth",
+     "condition": "Level 31",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 21,
+  "chain": {
+   "species": "diglett",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "dugtrio",
+     "condition": "Level 26",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 22,
+  "chain": {
+   "species": "meowth",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "persian",
+     "condition": "Level up high friendship",
+     "evolves_to": []
+    },
+    {
+     "species": "perrserker",
+     "condition": "Level 28",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 23,
+  "chain": {
+   "species": "psyduck",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "golduck",
+     "condition": "Level 33",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 24,
+  "chain": {
+   "species": "mankey",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "primeape",
+     "condition": "Level 28",
+     "evolves_to": [
+      {
+       "species": "annihilape",
+       "condition": "Use Move",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 25,
+  "chain": {
+   "species": "growlithe",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "arcanine",
+     "condition": "Use Fire Stone",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 26,
+  "chain": {
+   "species": "poliwag",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "poliwhirl",
+     "condition": "Level 25",
+     "evolves_to": [
+      {
+       "species": "poliwrath",
+       "condition": "Use Water Stone",
+       "evolves_to": []
+      },
+      {
+       "species": "politoed",
+       "condition": "Trade holding Kings Rock",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 27,
+  "chain": {
+   "species": "abra",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "kadabra",
+     "condition": "Level 16",
+     "evolves_to": [
+      {
+       "species": "alakazam",
+       "condition": "Trade",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 28,
+  "chain": {
+   "species": "machop",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "machoke",
+     "condition": "Level 28",
+     "evolves_to": [
+      {
+       "species": "machamp",
+       "condition": "Trade",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 29,
+  "chain": {
+   "species": "bellsprout",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "weepinbell",
+     "condition": "Level 21",
+     "evolves_to": [
+      {
+       "species": "victreebel",
+       "condition": "Use Leaf Stone",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 30,
+  "chain": {
+   "species": "tentacool",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "tentacruel",
+     "condition": "Level 30",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 31,
+  "chain": {
+   "species": "geodude",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "graveler",
+     "condition": "Level 25",
+     "evolves_to": [
+      {
+       "species": "golem",
+       "condition": "Trade",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 32,
+  "chain": {
+   "species": "ponyta",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "rapidash",
+     "condition": "Level 40",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 33,
+  "chain": {
+   "species": "slowpoke",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "slowbro",
+     "condition": "Use Galarica Cuff",
+     "evolves_to": []
+    },
+    {
+     "species": "slowking",
+     "condition": "Use Galarica Wreath",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 34,
+  "chain": {
+   "species": "magnemite",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "magneton",
+     "condition": "Level 30",
+     "evolves_to": [
+      {
+       "species": "magnezone",
+       "condition": "Level up at New Mauville",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 35,
+  "chain": {
+   "species": "farfetchd",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "sirfetchd",
+     "condition": "Three Critical Hits",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 36,
+  "chain": {
+   "species": "doduo",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "dodrio",
+     "condition": "Level 31",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 37,
+  "chain": {
+   "species": "seel",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "dewgong",
+     "condition": "Level 34",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 38,
+  "chain": {
+   "species": "grimer",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "muk",
+     "condition": "Level 38",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 39,
+  "chain": {
+   "species": "shellder",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "cloyster",
+     "condition": "Use Water Stone",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 40,
+  "chain": {
+   "species": "gastly",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "haunter",
+     "condition": "Level 25",
+     "evolves_to": [
+      {
+       "species": "gengar",
+       "condition": "Trade",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 41,
+  "chain": {
+   "species": "onix",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "steelix",
+     "condition": "Trade holding Metal Coat",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 42,
+  "chain": {
+   "species": "drowzee",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "hypno",
+     "condition": "Level 26",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 43,
+  "chain": {
+   "species": "krabby",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "kingler",
+     "condition": "Level 28",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 44,
+  "chain": {
+   "species": "voltorb",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "electrode",
+     "condition": "Use Leaf Stone",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 45,
+  "chain": {
+   "species": "exeggcute",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "exeggutor",
+     "condition": "Use Leaf Stone",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 46,
+  "chain": {
+   "species": "cubone",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "marowak",
+     "condition": "Level 28 (night)",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 47,
+  "chain": {
+   "species": "tyrogue",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "hitmonlee",
+     "condition": "Level 20",
+     "evolves_to": []
+    },
+    {
+     "species": "hitmonchan",
+     "condition": "Level 20",
+     "evolves_to": []
+    },
+    {
+     "species": "hitmontop",
+     "condition": "Level 20",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 48,
+  "chain": {
+   "species": "lickitung",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "lickilicky",
+     "condition": "Level up knowing Rollout",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 49,
+  "chain": {
+   "species": "koffing",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "weezing",
+     "condition": "Level 35",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 50,
+  "chain": {
+   "species": "rhyhorn",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "rhydon",
+     "condition": "Level 42",
+     "evolves_to": [
+      {
+       "species": "rhyperior",
+       "condition": "Trade holding Protector",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 51,
+  "chain": {
+   "species": "happiny",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "chansey",
+     "condition": "Level up holding Oval Stone (day)",
+     "evolves_to": [
+      {
+       "species": "blissey",
+       "condition": "Level up high friendship",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 52,
+  "chain": {
+   "species": "tangela",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "tangrowth",
+     "condition": "Level up knowing Ancient Power",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 53,
+  "chain": {
+   "species": "kangaskhan",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 54,
+  "chain": {
+   "species": "horsea",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "seadra",
+     "condition": "Level 32",
+     "evolves_to": [
+      {
+       "species": "kingdra",
+       "condition": "Trade holding Dragon Scale",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 55,
+  "chain": {
+   "species": "goldeen",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "seaking",
+     "condition": "Level 33",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 56,
+  "chain": {
+   "species": "staryu",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "starmie",
+     "condition": "Use Water Stone",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 57,
+  "chain": {
+   "species": "mime-jr",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "mr-mime",
+     "condition": "Level up knowing Mimic",
+     "evolves_to": [
+      {
+       "species": "mr-rime",
+       "condition": "Level 42",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 58,
+  "chain": {
+   "species": "scyther",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "scizor",
+     "condition": "Trade holding Metal Coat",
+     "evolves_to": []
+    },
+    {
+     "species": "kleavor",
+     "condition": "Use Black Augurite",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 59,
+  "chain": {
+   "species": "smoochum",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "jynx",
+     "condition": "Level 30",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 60,
+  "chain": {
+   "species": "elekid",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "electabuzz",
+     "condition": "Level 30",
+     "evolves_to": [
+      {
+       "species": "electivire",
+       "condition": "Trade holding Electirizer",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 61,
+  "chain": {
+   "species": "magby",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "magmar",
+     "condition": "Level 30",
+     "evolves_to": [
+      {
+       "species": "magmortar",
+       "condition": "Trade holding Magmarizer",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 62,
+  "chain": {
+   "species": "pinsir",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 63,
+  "chain": {
+   "species": "tauros",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 64,
+  "chain": {
+   "species": "magikarp",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "gyarados",
+     "condition": "Level 20",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 65,
+  "chain": {
+   "species": "lapras",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 66,
+  "chain": {
+   "species": "ditto",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 67,
+  "chain": {
+   "species": "eevee",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "vaporeon",
+     "condition": "Use Water Stone",
+     "evolves_to": []
+    },
+    {
+     "species": "jolteon",
+     "condition": "Use Thunder Stone",
+     "evolves_to": []
+    },
+    {
+     "species": "flareon",
+     "condition": "Use Fire Stone",
+     "evolves_to": []
+    },
+    {
+     "species": "espeon",
+     "condition": "Level up high friendship (day)",
+     "evolves_to": []
+    },
+    {
+     "species": "umbreon",
+     "condition": "Level up high friendship (night)",
+     "evolves_to": []
+    },
+    {
+     "species": "leafeon",
+     "condition": "Level up at Lush Jungle",
+     "evolves_to": []
+    },
+    {
+     "species": "glaceon",
+     "condition": "Level up at Mount Lanakila",
+     "evolves_to": []
+    },
+    {
+     "species": "sylveon",
+     "condition": "Level up high friendship knowing a Fairy-type move",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 68,
+  "chain": {
+   "species": "porygon",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "porygon2",
+     "condition": "Trade holding Up Grade",
+     "evolves_to": [
+      {
+       "species": "porygon-z",
+       "condition": "Trade holding Dubious Disc",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 69,
+  "chain": {
+   "species": "omanyte",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "omastar",
+     "condition": "Level 40",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 70,
+  "chain": {
+   "species": "kabuto",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "kabutops",
+     "condition": "Level 40",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 71,
+  "chain": {
+   "species": "aerodactyl",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 72,
+  "chain": {
+   "species": "munchlax",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "snorlax",
+     "condition": "Level up high friendship",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 73,
+  "chain": {
+   "species": "articuno",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 74,
+  "chain": {
+   "species": "zapdos",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 75,
+  "chain": {
+   "species": "moltres",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 76,
+  "chain": {
+   "species": "dratini",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "dragonair",
+     "condition": "Level 30",
+     "evolves_to": [
+      {
+       "species": "dragonite",
+       "condition": "Level 55",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 77,
+  "chain": {
+   "species": "mewtwo",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 78,
+  "chain": {
+   "species": "mew",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 79,
+  "chain": {
+   "species": "chikorita",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "bayleef",
+     "condition": "Level 16",
+     "evolves_to": [
+      {
+       "species": "meganium",
+       "condition": "Level 32",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 80,
+  "chain": {
+   "species": "cyndaquil",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "quilava",
+     "condition": "Level 17",
+     "evolves_to": [
+      {
+       "species": "typhlosion",
+       "condition": "Level 36",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 81,
+  "chain": {
+   "species": "totodile",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "croconaw",
+     "condition": "Level 18",
+     "evolves_to": [
+      {
+       "species": "feraligatr",
+       "condition": "Level 30",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 82,
+  "chain": {
+   "species": "sentret",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "furret",
+     "condition": "Level 15",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 83,
+  "chain": {
+   "species": "hoothoot",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "noctowl",
+     "condition": "Level 20",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 84,
+  "chain": {
+   "species": "ledyba",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "ledian",
+     "condition": "Level 18",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 85,
+  "chain": {
+   "species": "spinarak",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "ariados",
+     "condition": "Level 22",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 86,
+  "chain": {
+   "species": "chinchou",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "lanturn",
+     "condition": "Level 27",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 87,
+  "chain": {
+   "species": "togepi",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "togetic",
+     "condition": "Level up high friendship",
+     "evolves_to": [
+      {
+       "species": "togekiss",
+       "condition": "Use Shiny Stone",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 88,
+  "chain": {
+   "species": "natu",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "xatu",
+     "condition": "Level 25",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 89,
+  "chain": {
+   "species": "mareep",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "flaaffy",
+     "condition": "Level 15",
+     "evolves_to": [
+      {
+       "species": "ampharos",
+       "condition": "Level 30",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 90,
+  "chain": {
+   "species": "azurill",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "marill",
+     "condition": "Level up high friendship",
+     "evolves_to": [
+      {
+       "species": "azumarill",
+       "condition": "Level 18",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 91,
+  "chain": {
+   "species": "bonsly",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "sudowoodo",
+     "condition": "Level up knowing Mimic",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 92,
+  "chain": {
+   "species": "hoppip",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "skiploom",
+     "condition": "Level 18",
+     "evolves_to": [
+      {
+       "species": "jumpluff",
+       "condition": "Level 27",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 93,
+  "chain": {
+   "species": "aipom",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "ambipom",
+     "condition": "Level up knowing Double Hit",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 94,
+  "chain": {
+   "species": "sunkern",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "sunflora",
+     "condition": "Use Sun Stone",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 95,
+  "chain": {
+   "species": "yanma",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "yanmega",
+     "condition": "Level up knowing Ancient Power",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 96,
+  "chain": {
+   "species": "wooper",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "quagsire",
+     "condition": "Level 20",
+     "evolves_to": []
+    },
+    {
+     "species": "clodsire",
+     "condition": "Level 20",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 97,
+  "chain": {
+   "species": "murkrow",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "honchkrow",
+     "condition": "Use Dusk Stone",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 98,
+  "chain": {
+   "species": "misdreavus",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "mismagius",
+     "condition": "Use Dusk Stone",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 99,
+  "chain": {
+   "species": "unown",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 100,
+  "chain": {
+   "species": "wynaut",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "wobbuffet",
+     "condition": "Level 15",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 101,
+  "chain": {
+   "species": "girafarig",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "farigiraf",
+     "condition": "Level up knowing Twin Beam",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 102,
+  "chain": {
+   "species": "pineco",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "forretress",
+     "condition": "Level 31",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 103,
+  "chain": {
+   "species": "dunsparce",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "dudunsparce",
+     "condition": "Level up knowing Hyper Drill",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 104,
+  "chain": {
+   "species": "gligar",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "gliscor",
+     "condition": "Level up holding Razor Fang (night)",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 105,
+  "chain": {
+   "species": "snubbull",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "granbull",
+     "condition": "Level 23",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 106,
+  "chain": {
+   "species": "qwilfish",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "overqwil",
+     "condition": "Use Move",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 107,
+  "chain": {
+   "species": "shuckle",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 108,
+  "chain": {
+   "species": "heracross",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 109,
+  "chain": {
+   "species": "sneasel",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "weavile",
+     "condition": "Level up holding Razor Claw (night)",
+     "evolves_to": []
+    },
+    {
+     "species": "sneasler",
+     "condition": "Level up holding Razor Claw (day)",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 110,
+  "chain": {
+   "species": "teddiursa",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "ursaring",
+     "condition": "Level 30",
+     "evolves_to": [
+      {
+       "species": "ursaluna",
+       "condition": "Use Peat Block (full-moon)",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 111,
+  "chain": {
+   "species": "slugma",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "magcargo",
+     "condition": "Level 38",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 112,
+  "chain": {
+   "species": "swinub",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "piloswine",
+     "condition": "Level 33",
+     "evolves_to": [
+      {
+       "species": "mamoswine",
+       "condition": "Level up knowing Ancient Power",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 113,
+  "chain": {
+   "species": "corsola",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "cursola",
+     "condition": "Level 38",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 114,
+  "chain": {
+   "species": "remoraid",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "octillery",
+     "condition": "Level 25",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 115,
+  "chain": {
+   "species": "delibird",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 116,
+  "chain": {
+   "species": "mantyke",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "mantine",
+     "condition": "Level up",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 117,
+  "chain": {
+   "species": "skarmory",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 118,
+  "chain": {
+   "species": "houndour",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "houndoom",
+     "condition": "Level 24",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 119,
+  "chain": {
+   "species": "phanpy",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "donphan",
+     "condition": "Level 25",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 120,
+  "chain": {
+   "species": "stantler",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "wyrdeer",
+     "condition": "Agile Style Move",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 121,
+  "chain": {
+   "species": "smeargle",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 122,
+  "chain": {
+   "species": "miltank",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 123,
+  "chain": {
+   "species": "raikou",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 124,
+  "chain": {
+   "species": "entei",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 125,
+  "chain": {
+   "species": "suicune",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 126,
+  "chain": {
+   "species": "larvitar",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "pupitar",
+     "condition": "Level 30",
+     "evolves_to": [
+      {
+       "species": "tyranitar",
+       "condition": "Level 55",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 127,
+  "chain": {
+   "species": "lugia",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 128,
+  "chain": {
+   "species": "ho-oh",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 129,
+  "chain": {
+   "species": "celebi",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 130,
+  "chain": {
+   "species": "treecko",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "grovyle",
+     "condition": "Level 16",
+     "evolves_to": [
+      {
+       "species": "sceptile",
+       "condition": "Level 36",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 131,
+  "chain": {
+   "species": "torchic",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "combusken",
+     "condition": "Level 16",
+     "evolves_to": [
+      {
+       "species": "blaziken",
+       "condition": "Level 36",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 132,
+  "chain": {
+   "species": "mudkip",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "marshtomp",
+     "condition": "Level 16",
+     "evolves_to": [
+      {
+       "species": "swampert",
+       "condition": "Level 36",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 133,
+  "chain": {
+   "species": "poochyena",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "mightyena",
+     "condition": "Level 18",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 134,
+  "chain": {
+   "species": "zigzagoon",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "linoone",
+     "condition": "Level 20",
+     "evolves_to": [
+      {
+       "species": "obstagoon",
+       "condition": "Level 35 (night)",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 135,
+  "chain": {
+   "species": "wurmple",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "silcoon",
+     "condition": "Level 7",
+     "evolves_to": [
+      {
+       "species": "beautifly",
+       "condition": "Level 10",
+       "evolves_to": []
+      }
+     ]
+    },
+    {
+     "species": "cascoon",
+     "condition": "Level 7",
+     "evolves_to": [
+      {
+       "species": "dustox",
+       "condition": "Level 10",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 136,
+  "chain": {
+   "species": "lotad",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "lombre",
+     "condition": "Level 14",
+     "evolves_to": [
+      {
+       "species": "ludicolo",
+       "condition": "Use Water Stone",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 137,
+  "chain": {
+   "species": "seedot",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "nuzleaf",
+     "condition": "Level 14",
+     "evolves_to": [
+      {
+       "species": "shiftry",
+       "condition": "Use Leaf Stone",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 138,
+  "chain": {
+   "species": "taillow",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "swellow",
+     "condition": "Level 22",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 139,
+  "chain": {
+   "species": "wingull",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "pelipper",
+     "condition": "Level 25",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 140,
+  "chain": {
+   "species": "ralts",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "kirlia",
+     "condition": "Level 20",
+     "evolves_to": [
+      {
+       "species": "gardevoir",
+       "condition": "Level 30",
+       "evolves_to": []
+      },
+      {
+       "species": "gallade",
+       "condition": "Use Dawn Stone (male)",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 141,
+  "chain": {
+   "species": "surskit",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "masquerain",
+     "condition": "Level 22",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 142,
+  "chain": {
+   "species": "shroomish",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "breloom",
+     "condition": "Level 23",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 143,
+  "chain": {
+   "species": "slakoth",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "vigoroth",
+     "condition": "Level 18",
+     "evolves_to": [
+      {
+       "species": "slaking",
+       "condition": "Level 36",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 144,
+  "chain": {
+   "species": "nincada",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "ninjask",
+     "condition": "Level 20",
+     "evolves_to": []
+    },
+    {
+     "species": "shedinja",
+     "condition": "Shed",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 145,
+  "chain": {
+   "species": "whismur",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "loudred",
+     "condition": "Level 20",
+     "evolves_to": [
+      {
+       "species": "exploud",
+       "condition": "Level 40",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 146,
+  "chain": {
+   "species": "makuhita",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "hariyama",
+     "condition": "Level 24",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 147,
+  "chain": {
+   "species": "nosepass",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "probopass",
+     "condition": "Level up at New Mauville",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 148,
+  "chain": {
+   "species": "skitty",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "delcatty",
+     "condition": "Use Moon Stone",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 149,
+  "chain": {
+   "species": "sableye",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 150,
+  "chain": {
+   "species": "mawile",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 151,
+  "chain": {
+   "species": "aron",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "lairon",
+     "condition": "Level 32",
+     "evolves_to": [
+      {
+       "species": "aggron",
+       "condition": "Level 42",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 152,
+  "chain": {
+   "species": "meditite",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "medicham",
+     "condition": "Level 37",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 153,
+  "chain": {
+   "species": "electrike",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "manectric",
+     "condition": "Level 26",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 154,
+  "chain": {
+   "species": "plusle",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 155,
+  "chain": {
+   "species": "minun",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 156,
+  "chain": {
+   "species": "volbeat",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 157,
+  "chain": {
+   "species": "illumise",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 158,
+  "chain": {
+   "species": "budew",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "roselia",
+     "condition": "Level up high friendship (day)",
+     "evolves_to": [
+      {
+       "species": "roserade",
+       "condition": "Use Shiny Stone",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 159,
+  "chain": {
+   "species": "gulpin",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "swalot",
+     "condition": "Level 26",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 160,
+  "chain": {
+   "species": "carvanha",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "sharpedo",
+     "condition": "Level 30",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 161,
+  "chain": {
+   "species": "wailmer",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "wailord",
+     "condition": "Level 40",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 162,
+  "chain": {
+   "species": "numel",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "camerupt",
+     "condition": "Level 33",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 163,
+  "chain": {
+   "species": "torkoal",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 164,
+  "chain": {
+   "species": "spoink",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "grumpig",
+     "condition": "Level 32",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 165,
+  "chain": {
+   "species": "spinda",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 166,
+  "chain": {
+   "species": "trapinch",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "vibrava",
+     "condition": "Level 35",
+     "evolves_to": [
+      {
+       "species": "flygon",
+       "condition": "Level 45",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 167,
+  "chain": {
+   "species": "cacnea",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "cacturne",
+     "condition": "Level 32",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 168,
+  "chain": {
+   "species": "swablu",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "altaria",
+     "condition": "Level 35",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 169,
+  "chain": {
+   "species": "zangoose",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 170,
+  "chain": {
+   "species": "seviper",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 171,
+  "chain": {
+   "species": "lunatone",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 172,
+  "chain": {
+   "species": "solrock",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 173,
+  "chain": {
+   "species": "barboach",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "whiscash",
+     "condition": "Level 30",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 174,
+  "chain": {
+   "species": "corphish",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "crawdaunt",
+     "condition": "Level 30",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 175,
+  "chain": {
+   "species": "baltoy",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "claydol",
+     "condition": "Level 36",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 176,
+  "chain": {
+   "species": "lileep",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "cradily",
+     "condition": "Level 40",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 177,
+  "chain": {
+   "species": "anorith",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "armaldo",
+     "condition": "Level 40",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 178,
+  "chain": {
+   "species": "feebas",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "milotic",
+     "condition": "Level up high beauty",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 179,
+  "chain": {
+   "species": "castform",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 180,
+  "chain": {
+   "species": "kecleon",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 181,
+  "chain": {
+   "species": "shuppet",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "banette",
+     "condition": "Level 37",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 182,
+  "chain": {
+   "species": "duskull",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "dusclops",
+     "condition": "Level 37",
+     "evolves_to": [
+      {
+       "species": "dusknoir",
+       "condition": "Trade holding Reaper Cloth",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 183,
+  "chain": {
+   "species": "tropius",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 184,
+  "chain": {
+   "species": "chingling",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "chimecho",
+     "condition": "Level up high friendship (night)",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 185,
+  "chain": {
+   "species": "absol",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 186,
+  "chain": {
+   "species": "snorunt",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "glalie",
+     "condition": "Level 42",
+     "evolves_to": []
+    },
+    {
+     "species": "froslass",
+     "condition": "Use Dawn Stone (female)",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 187,
+  "chain": {
+   "species": "spheal",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "sealeo",
+     "condition": "Level 32",
+     "evolves_to": [
+      {
+       "species": "walrein",
+       "condition": "Level 44",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 188,
+  "chain": {
+   "species": "clamperl",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "huntail",
+     "condition": "Trade holding Deep Sea Tooth",
+     "evolves_to": []
+    },
+    {
+     "species": "gorebyss",
+     "condition": "Trade holding Deep Sea Scale",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 189,
+  "chain": {
+   "species": "relicanth",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 190,
+  "chain": {
+   "species": "luvdisc",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 191,
+  "chain": {
+   "species": "bagon",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "shelgon",
+     "condition": "Level 30",
+     "evolves_to": [
+      {
+       "species": "salamence",
+       "condition": "Level 50",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 192,
+  "chain": {
+   "species": "beldum",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "metang",
+     "condition": "Level 20",
+     "evolves_to": [
+      {
+       "species": "metagross",
+       "condition": "Level 45",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 193,
+  "chain": {
+   "species": "regirock",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 194,
+  "chain": {
+   "species": "regice",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 195,
+  "chain": {
+   "species": "registeel",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 196,
+  "chain": {
+   "species": "latias",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 197,
+  "chain": {
+   "species": "latios",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 198,
+  "chain": {
+   "species": "kyogre",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 199,
+  "chain": {
+   "species": "groudon",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 200,
+  "chain": {
+   "species": "rayquaza",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 201,
+  "chain": {
+   "species": "jirachi",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 202,
+  "chain": {
+   "species": "deoxys",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 203,
+  "chain": {
+   "species": "turtwig",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "grotle",
+     "condition": "Level 18",
+     "evolves_to": [
+      {
+       "species": "torterra",
+       "condition": "Level 32",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 204,
+  "chain": {
+   "species": "chimchar",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "monferno",
+     "condition": "Level 14",
+     "evolves_to": [
+      {
+       "species": "infernape",
+       "condition": "Level 36",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 205,
+  "chain": {
+   "species": "piplup",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "prinplup",
+     "condition": "Level 16",
+     "evolves_to": [
+      {
+       "species": "empoleon",
+       "condition": "Level 36",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 206,
+  "chain": {
+   "species": "starly",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "staravia",
+     "condition": "Level 14",
+     "evolves_to": [
+      {
+       "species": "staraptor",
+       "condition": "Level 34",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 207,
+  "chain": {
+   "species": "bidoof",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "bibarel",
+     "condition": "Level 15",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 208,
+  "chain": {
+   "species": "kricketot",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "kricketune",
+     "condition": "Level 10",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 209,
+  "chain": {
+   "species": "shinx",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "luxio",
+     "condition": "Level 15",
+     "evolves_to": [
+      {
+       "species": "luxray",
+       "condition": "Level 30",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 211,
+  "chain": {
+   "species": "cranidos",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "rampardos",
+     "condition": "Level 30",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 212,
+  "chain": {
+   "species": "shieldon",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "bastiodon",
+     "condition": "Level 30",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 213,
+  "chain": {
+   "species": "burmy",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "wormadam",
+     "condition": "Level 20 (female)",
+     "evolves_to": []
+    },
+    {
+     "species": "mothim",
+     "condition": "Level 20 (male)",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 214,
+  "chain": {
+   "species": "combee",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "vespiquen",
+     "condition": "Level 21 (female)",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 215,
+  "chain": {
+   "species": "pachirisu",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 216,
+  "chain": {
+   "species": "buizel",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "floatzel",
+     "condition": "Level 26",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 217,
+  "chain": {
+   "species": "cherubi",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "cherrim",
+     "condition": "Level 25",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 218,
+  "chain": {
+   "species": "shellos",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "gastrodon",
+     "condition": "Level 30",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 219,
+  "chain": {
+   "species": "drifloon",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "drifblim",
+     "condition": "Level 28",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 220,
+  "chain": {
+   "species": "buneary",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "lopunny",
+     "condition": "Level up high friendship",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 221,
+  "chain": {
+   "species": "glameow",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "purugly",
+     "condition": "Level 38",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 223,
+  "chain": {
+   "species": "stunky",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "skuntank",
+     "condition": "Level 34",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 224,
+  "chain": {
+   "species": "bronzor",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "bronzong",
+     "condition": "Level 33",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 228,
+  "chain": {
+   "species": "chatot",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 229,
+  "chain": {
+   "species": "spiritomb",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 230,
+  "chain": {
+   "species": "gible",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "gabite",
+     "condition": "Level 24",
+     "evolves_to": [
+      {
+       "species": "garchomp",
+       "condition": "Level 48",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 232,
+  "chain": {
+   "species": "riolu",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "lucario",
+     "condition": "Level up high friendship (day)",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 233,
+  "chain": {
+   "species": "hippopotas",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "hippowdon",
+     "condition": "Level 34",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 234,
+  "chain": {
+   "species": "skorupi",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "drapion",
+     "condition": "Level 40",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 235,
+  "chain": {
+   "species": "croagunk",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "toxicroak",
+     "condition": "Level 37",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 236,
+  "chain": {
+   "species": "carnivine",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 237,
+  "chain": {
+   "species": "finneon",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "lumineon",
+     "condition": "Level 31",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 239,
+  "chain": {
+   "species": "snover",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "abomasnow",
+     "condition": "Level 40",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 240,
+  "chain": {
+   "species": "rotom",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 241,
+  "chain": {
+   "species": "uxie",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 242,
+  "chain": {
+   "species": "mesprit",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 243,
+  "chain": {
+   "species": "azelf",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 244,
+  "chain": {
+   "species": "dialga",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 245,
+  "chain": {
+   "species": "palkia",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 246,
+  "chain": {
+   "species": "heatran",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 247,
+  "chain": {
+   "species": "regigigas",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 248,
+  "chain": {
+   "species": "giratina",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 249,
+  "chain": {
+   "species": "cresselia",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 250,
+  "chain": {
+   "species": "phione",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "manaphy",
+     "condition": "",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 252,
+  "chain": {
+   "species": "darkrai",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 253,
+  "chain": {
+   "species": "shaymin",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 254,
+  "chain": {
+   "species": "arceus",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 255,
+  "chain": {
+   "species": "victini",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 256,
+  "chain": {
+   "species": "snivy",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "servine",
+     "condition": "Level 17",
+     "evolves_to": [
+      {
+       "species": "serperior",
+       "condition": "Level 36",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 257,
+  "chain": {
+   "species": "tepig",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "pignite",
+     "condition": "Level 17",
+     "evolves_to": [
+      {
+       "species": "emboar",
+       "condition": "Level 36",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 258,
+  "chain": {
+   "species": "oshawott",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "dewott",
+     "condition": "Level 17",
+     "evolves_to": [
+      {
+       "species": "samurott",
+       "condition": "Level 36",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 259,
+  "chain": {
+   "species": "patrat",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "watchog",
+     "condition": "Level 20",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 260,
+  "chain": {
+   "species": "lillipup",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "herdier",
+     "condition": "Level 16",
+     "evolves_to": [
+      {
+       "species": "stoutland",
+       "condition": "Level 32",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 261,
+  "chain": {
+   "species": "purrloin",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "liepard",
+     "condition": "Level 20",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 262,
+  "chain": {
+   "species": "pansage",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "simisage",
+     "condition": "Use Leaf Stone",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 263,
+  "chain": {
+   "species": "pansear",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "simisear",
+     "condition": "Use Fire Stone",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 264,
+  "chain": {
+   "species": "panpour",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "simipour",
+     "condition": "Use Water Stone",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 265,
+  "chain": {
+   "species": "munna",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "musharna",
+     "condition": "Use Moon Stone",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 266,
+  "chain": {
+   "species": "pidove",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "tranquill",
+     "condition": "Level 21",
+     "evolves_to": [
+      {
+       "species": "unfezant",
+       "condition": "Level 32",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 267,
+  "chain": {
+   "species": "blitzle",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "zebstrika",
+     "condition": "Level 27",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 268,
+  "chain": {
+   "species": "roggenrola",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "boldore",
+     "condition": "Level 25",
+     "evolves_to": [
+      {
+       "species": "gigalith",
+       "condition": "Trade",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 269,
+  "chain": {
+   "species": "woobat",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "swoobat",
+     "condition": "Level up high friendship",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 270,
+  "chain": {
+   "species": "drilbur",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "excadrill",
+     "condition": "Level 31",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 271,
+  "chain": {
+   "species": "audino",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 272,
+  "chain": {
+   "species": "timburr",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "gurdurr",
+     "condition": "Level 25",
+     "evolves_to": [
+      {
+       "species": "conkeldurr",
+       "condition": "Trade",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 273,
+  "chain": {
+   "species": "tympole",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "palpitoad",
+     "condition": "Level 25",
+     "evolves_to": [
+      {
+       "species": "seismitoad",
+       "condition": "Level 36",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 274,
+  "chain": {
+   "species": "throh",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 275,
+  "chain": {
+   "species": "sawk",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 276,
+  "chain": {
+   "species": "sewaddle",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "swadloon",
+     "condition": "Level 20",
+     "evolves_to": [
+      {
+       "species": "leavanny",
+       "condition": "Level up high friendship",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 277,
+  "chain": {
+   "species": "venipede",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "whirlipede",
+     "condition": "Level 22",
+     "evolves_to": [
+      {
+       "species": "scolipede",
+       "condition": "Level 30",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 278,
+  "chain": {
+   "species": "cottonee",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "whimsicott",
+     "condition": "Use Sun Stone",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 279,
+  "chain": {
+   "species": "petilil",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "lilligant",
+     "condition": "Use Sun Stone",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 280,
+  "chain": {
+   "species": "basculin",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "basculegion",
+     "condition": "(female)",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 281,
+  "chain": {
+   "species": "sandile",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "krokorok",
+     "condition": "Level 29",
+     "evolves_to": [
+      {
+       "species": "krookodile",
+       "condition": "Level 40",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 282,
+  "chain": {
+   "species": "darumaka",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "darmanitan",
+     "condition": "Use Ice Stone",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 283,
+  "chain": {
+   "species": "maractus",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 284,
+  "chain": {
+   "species": "dwebble",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "crustle",
+     "condition": "Level 34",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 285,
+  "chain": {
+   "species": "scraggy",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "scrafty",
+     "condition": "Level 39",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 286,
+  "chain": {
+   "species": "sigilyph",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 287,
+  "chain": {
+   "species": "yamask",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "cofagrigus",
+     "condition": "Level 34",
+     "evolves_to": []
+    },
+    {
+     "species": "runerigus",
+     "condition": "at Dusty Bowl",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 288,
+  "chain": {
+   "species": "tirtouga",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "carracosta",
+     "condition": "Level 37",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 289,
+  "chain": {
+   "species": "archen",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "archeops",
+     "condition": "Level 37",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 290,
+  "chain": {
+   "species": "trubbish",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "garbodor",
+     "condition": "Level 36",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 291,
+  "chain": {
+   "species": "zorua",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "zoroark",
+     "condition": "Level 30",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 292,
+  "chain": {
+   "species": "minccino",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "cinccino",
+     "condition": "Use Shiny Stone",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 293,
+  "chain": {
+   "species": "gothita",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "gothorita",
+     "condition": "Level 32",
+     "evolves_to": [
+      {
+       "species": "gothitelle",
+       "condition": "Level 41",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 294,
+  "chain": {
+   "species": "solosis",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "duosion",
+     "condition": "Level 32",
+     "evolves_to": [
+      {
+       "species": "reuniclus",
+       "condition": "Level 41",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 295,
+  "chain": {
+   "species": "ducklett",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "swanna",
+     "condition": "Level 35",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 296,
+  "chain": {
+   "species": "vanillite",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "vanillish",
+     "condition": "Level 35",
+     "evolves_to": [
+      {
+       "species": "vanilluxe",
+       "condition": "Level 47",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 297,
+  "chain": {
+   "species": "deerling",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "sawsbuck",
+     "condition": "Level 34",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 298,
+  "chain": {
+   "species": "emolga",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 299,
+  "chain": {
+   "species": "karrablast",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "escavalier",
+     "condition": "Trade for Shelmet",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 300,
+  "chain": {
+   "species": "foongus",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "amoonguss",
+     "condition": "Level 39",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 301,
+  "chain": {
+   "species": "frillish",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "jellicent",
+     "condition": "Level 40",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 302,
+  "chain": {
+   "species": "alomomola",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 303,
+  "chain": {
+   "species": "joltik",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "galvantula",
+     "condition": "Level 36",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 304,
+  "chain": {
+   "species": "ferroseed",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "ferrothorn",
+     "condition": "Level 40",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 305,
+  "chain": {
+   "species": "klink",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "klang",
+     "condition": "Level 38",
+     "evolves_to": [
+      {
+       "species": "klinklang",
+       "condition": "Level 49",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 306,
+  "chain": {
+   "species": "tynamo",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "eelektrik",
+     "condition": "Level 39",
+     "evolves_to": [
+      {
+       "species": "eelektross",
+       "condition": "Use Thunder Stone",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 307,
+  "chain": {
+   "species": "elgyem",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "beheeyem",
+     "condition": "Level 42",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 308,
+  "chain": {
+   "species": "litwick",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "lampent",
+     "condition": "Level 41",
+     "evolves_to": [
+      {
+       "species": "chandelure",
+       "condition": "Use Dusk Stone",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 309,
+  "chain": {
+   "species": "axew",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "fraxure",
+     "condition": "Level 38",
+     "evolves_to": [
+      {
+       "species": "haxorus",
+       "condition": "Level 48",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 310,
+  "chain": {
+   "species": "cubchoo",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "beartic",
+     "condition": "Level 37",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 311,
+  "chain": {
+   "species": "cryogonal",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 312,
+  "chain": {
+   "species": "shelmet",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "accelgor",
+     "condition": "Trade for Karrablast",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 313,
+  "chain": {
+   "species": "stunfisk",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 314,
+  "chain": {
+   "species": "mienfoo",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "mienshao",
+     "condition": "Level 50",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 315,
+  "chain": {
+   "species": "druddigon",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 316,
+  "chain": {
+   "species": "golett",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "golurk",
+     "condition": "Level 43",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 317,
+  "chain": {
+   "species": "pawniard",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "bisharp",
+     "condition": "Level 52",
+     "evolves_to": [
+      {
+       "species": "kingambit",
+       "condition": "Three Defeated Bisharp",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 318,
+  "chain": {
+   "species": "bouffalant",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 319,
+  "chain": {
+   "species": "rufflet",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "braviary",
+     "condition": "Level 54",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 320,
+  "chain": {
+   "species": "vullaby",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "mandibuzz",
+     "condition": "Level 54",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 321,
+  "chain": {
+   "species": "heatmor",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 322,
+  "chain": {
+   "species": "durant",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 323,
+  "chain": {
+   "species": "deino",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "zweilous",
+     "condition": "Level 50",
+     "evolves_to": [
+      {
+       "species": "hydreigon",
+       "condition": "Level 64",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 324,
+  "chain": {
+   "species": "larvesta",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "volcarona",
+     "condition": "Level 59",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 325,
+  "chain": {
+   "species": "cobalion",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 326,
+  "chain": {
+   "species": "terrakion",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 327,
+  "chain": {
+   "species": "virizion",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 328,
+  "chain": {
+   "species": "tornadus",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 329,
+  "chain": {
+   "species": "thundurus",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 330,
+  "chain": {
+   "species": "reshiram",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 331,
+  "chain": {
+   "species": "zekrom",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 332,
+  "chain": {
+   "species": "landorus",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 333,
+  "chain": {
+   "species": "kyurem",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 334,
+  "chain": {
+   "species": "keldeo",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 335,
+  "chain": {
+   "species": "meloetta",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 336,
+  "chain": {
+   "species": "genesect",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 337,
+  "chain": {
+   "species": "chespin",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "quilladin",
+     "condition": "Level 16",
+     "evolves_to": [
+      {
+       "species": "chesnaught",
+       "condition": "Level 36",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 338,
+  "chain": {
+   "species": "fennekin",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "braixen",
+     "condition": "Level 16",
+     "evolves_to": [
+      {
+       "species": "delphox",
+       "condition": "Level 36",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 339,
+  "chain": {
+   "species": "froakie",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "frogadier",
+     "condition": "Level 16",
+     "evolves_to": [
+      {
+       "species": "greninja",
+       "condition": "Level 36",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 340,
+  "chain": {
+   "species": "bunnelby",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "diggersby",
+     "condition": "Level 20",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 341,
+  "chain": {
+   "species": "fletchling",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "fletchinder",
+     "condition": "Level 17",
+     "evolves_to": [
+      {
+       "species": "talonflame",
+       "condition": "Level 35",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 342,
+  "chain": {
+   "species": "scatterbug",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "spewpa",
+     "condition": "Level 9",
+     "evolves_to": [
+      {
+       "species": "vivillon",
+       "condition": "Level 12",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 343,
+  "chain": {
+   "species": "litleo",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "pyroar",
+     "condition": "Level 35",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 344,
+  "chain": {
+   "species": "flabebe",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "floette",
+     "condition": "Level 19",
+     "evolves_to": [
+      {
+       "species": "florges",
+       "condition": "Use Shiny Stone",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 345,
+  "chain": {
+   "species": "skiddo",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "gogoat",
+     "condition": "Level 32",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 346,
+  "chain": {
+   "species": "pancham",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "pangoro",
+     "condition": "Level 32",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 347,
+  "chain": {
+   "species": "furfrou",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 348,
+  "chain": {
+   "species": "espurr",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "meowstic",
+     "condition": "Level 25 (female)",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 349,
+  "chain": {
+   "species": "honedge",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "doublade",
+     "condition": "Level 35",
+     "evolves_to": [
+      {
+       "species": "aegislash",
+       "condition": "Use Dusk Stone",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 350,
+  "chain": {
+   "species": "spritzee",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "aromatisse",
+     "condition": "Trade holding Sachet",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 351,
+  "chain": {
+   "species": "swirlix",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "slurpuff",
+     "condition": "Trade holding Whipped Dream",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 352,
+  "chain": {
+   "species": "inkay",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "malamar",
+     "condition": "Level 30 with device upside down",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 353,
+  "chain": {
+   "species": "binacle",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "barbaracle",
+     "condition": "Level 39",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 354,
+  "chain": {
+   "species": "skrelp",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "dragalge",
+     "condition": "Level 48",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 355,
+  "chain": {
+   "species": "clauncher",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "clawitzer",
+     "condition": "Level 37",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 356,
+  "chain": {
+   "species": "helioptile",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "heliolisk",
+     "condition": "Use Sun Stone",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 357,
+  "chain": {
+   "species": "tyrunt",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "tyrantrum",
+     "condition": "Level 39 (day)",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 358,
+  "chain": {
+   "species": "amaura",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "aurorus",
+     "condition": "Level 39 (night)",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 359,
+  "chain": {
+   "species": "hawlucha",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 360,
+  "chain": {
+   "species": "dedenne",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 361,
+  "chain": {
+   "species": "carbink",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 362,
+  "chain": {
+   "species": "goomy",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "sliggoo",
+     "condition": "Level 40",
+     "evolves_to": [
+      {
+       "species": "goodra",
+       "condition": "Level 50 while raining",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 363,
+  "chain": {
+   "species": "klefki",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 364,
+  "chain": {
+   "species": "phantump",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "trevenant",
+     "condition": "Trade",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 365,
+  "chain": {
+   "species": "pumpkaboo",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "gourgeist",
+     "condition": "Trade",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 366,
+  "chain": {
+   "species": "bergmite",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "avalugg",
+     "condition": "Level 37",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 367,
+  "chain": {
+   "species": "noibat",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "noivern",
+     "condition": "Level 48",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 368,
+  "chain": {
+   "species": "xerneas",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 369,
+  "chain": {
+   "species": "yveltal",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 370,
+  "chain": {
+   "species": "zygarde",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 371,
+  "chain": {
+   "species": "diancie",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 372,
+  "chain": {
+   "species": "hoopa",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 373,
+  "chain": {
+   "species": "volcanion",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 374,
+  "chain": {
+   "species": "rowlet",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "dartrix",
+     "condition": "Level 17",
+     "evolves_to": [
+      {
+       "species": "decidueye",
+       "condition": "Level 36",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 375,
+  "chain": {
+   "species": "litten",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "torracat",
+     "condition": "Level 17",
+     "evolves_to": [
+      {
+       "species": "incineroar",
+       "condition": "Level 34",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 376,
+  "chain": {
+   "species": "popplio",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "brionne",
+     "condition": "Level 17",
+     "evolves_to": [
+      {
+       "species": "primarina",
+       "condition": "Level 34",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 377,
+  "chain": {
+   "species": "pikipek",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "trumbeak",
+     "condition": "Level 14",
+     "evolves_to": [
+      {
+       "species": "toucannon",
+       "condition": "Level 28",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 378,
+  "chain": {
+   "species": "yungoos",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "gumshoos",
+     "condition": "Level 20 (day)",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 379,
+  "chain": {
+   "species": "grubbin",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "charjabug",
+     "condition": "Level 20",
+     "evolves_to": [
+      {
+       "species": "vikavolt",
+       "condition": "Use Thunder Stone",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 380,
+  "chain": {
+   "species": "crabrawler",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "crabominable",
+     "condition": "Use Ice Stone",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 381,
+  "chain": {
+   "species": "oricorio",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 382,
+  "chain": {
+   "species": "cutiefly",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "ribombee",
+     "condition": "Level 25",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 383,
+  "chain": {
+   "species": "rockruff",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "lycanroc",
+     "condition": "Level 25 (dusk)",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 384,
+  "chain": {
+   "species": "wishiwashi",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 385,
+  "chain": {
+   "species": "mareanie",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "toxapex",
+     "condition": "Level 38",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 386,
+  "chain": {
+   "species": "mudbray",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "mudsdale",
+     "condition": "Level 30",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 387,
+  "chain": {
+   "species": "dewpider",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "araquanid",
+     "condition": "Level 22",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 388,
+  "chain": {
+   "species": "fomantis",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "lurantis",
+     "condition": "Level 34 (day)",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 389,
+  "chain": {
+   "species": "morelull",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "shiinotic",
+     "condition": "Level 24",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 390,
+  "chain": {
+   "species": "salandit",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "salazzle",
+     "condition": "Level 33 (female)",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 391,
+  "chain": {
+   "species": "stufful",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "bewear",
+     "condition": "Level 27",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 392,
+  "chain": {
+   "species": "bounsweet",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "steenee",
+     "condition": "Level 18",
+     "evolves_to": [
+      {
+       "species": "tsareena",
+       "condition": "Level up knowing Stomp",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 393,
+  "chain": {
+   "species": "comfey",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 394,
+  "chain": {
+   "species": "oranguru",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 395,
+  "chain": {
+   "species": "passimian",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 396,
+  "chain": {
+   "species": "wimpod",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "golisopod",
+     "condition": "Level 30",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 397,
+  "chain": {
+   "species": "sandygast",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "palossand",
+     "condition": "Level 42",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 398,
+  "chain": {
+   "species": "pyukumuku",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 399,
+  "chain": {
+   "species": "type-null",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "silvally",
+     "condition": "Level up high friendship",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 400,
+  "chain": {
+   "species": "minior",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 401,
+  "chain": {
+   "species": "komala",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 402,
+  "chain": {
+   "species": "turtonator",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 403,
+  "chain": {
+   "species": "togedemaru",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 404,
+  "chain": {
+   "species": "mimikyu",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 405,
+  "chain": {
+   "species": "bruxish",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 406,
+  "chain": {
+   "species": "drampa",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 407,
+  "chain": {
+   "species": "dhelmise",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 408,
+  "chain": {
+   "species": "jangmo-o",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "hakamo-o",
+     "condition": "Level 35",
+     "evolves_to": [
+      {
+       "species": "kommo-o",
+       "condition": "Level 45",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 409,
+  "chain": {
+   "species": "tapu-koko",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 410,
+  "chain": {
+   "species": "tapu-lele",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 411,
+  "chain": {
+   "species": "tapu-bulu",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 412,
+  "chain": {
+   "species": "tapu-fini",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 413,
+  "chain": {
+   "species": "cosmog",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "cosmoem",
+     "condition": "Level 43",
+     "evolves_to": [
+      {
+       "species": "solgaleo",
+       "condition": "Level 53",
+       "evolves_to": []
+      },
+      {
+       "species": "lunala",
+       "condition": "Level 53",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 414,
+  "chain": {
+   "species": "nihilego",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 415,
+  "chain": {
+   "species": "buzzwole",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 416,
+  "chain": {
+   "species": "pheromosa",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 417,
+  "chain": {
+   "species": "xurkitree",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 418,
+  "chain": {
+   "species": "celesteela",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 419,
+  "chain": {
+   "species": "kartana",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 420,
+  "chain": {
+   "species": "guzzlord",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 421,
+  "chain": {
+   "species": "necrozma",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 422,
+  "chain": {
+   "species": "magearna",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 423,
+  "chain": {
+   "species": "marshadow",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 424,
+  "chain": {
+   "species": "poipole",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "naganadel",
+     "condition": "Level up knowing Dragon Pulse",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 425,
+  "chain": {
+   "species": "stakataka",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 426,
+  "chain": {
+   "species": "blacephalon",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 427,
+  "chain": {
+   "species": "zeraora",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 428,
+  "chain": {
+   "species": "meltan",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "melmetal",
+     "condition": "Meltan Candies",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 430,
+  "chain": {
+   "species": "grookey",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "thwackey",
+     "condition": "Level 16",
+     "evolves_to": [
+      {
+       "species": "rillaboom",
+       "condition": "Level 35",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 431,
+  "chain": {
+   "species": "scorbunny",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "raboot",
+     "condition": "Level 16",
+     "evolves_to": [
+      {
+       "species": "cinderace",
+       "condition": "Level 35",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 432,
+  "chain": {
+   "species": "sobble",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "drizzile",
+     "condition": "Level 16",
+     "evolves_to": [
+      {
+       "species": "inteleon",
+       "condition": "Level 35",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 433,
+  "chain": {
+   "species": "skwovet",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "greedent",
+     "condition": "Level 24",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 434,
+  "chain": {
+   "species": "rookidee",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "corvisquire",
+     "condition": "Level 18",
+     "evolves_to": [
+      {
+       "species": "corviknight",
+       "condition": "Level 38",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 435,
+  "chain": {
+   "species": "blipbug",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "dottler",
+     "condition": "Level 10",
+     "evolves_to": [
+      {
+       "species": "orbeetle",
+       "condition": "Level 30",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 436,
+  "chain": {
+   "species": "nickit",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "thievul",
+     "condition": "Level 18",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 437,
+  "chain": {
+   "species": "gossifleur",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "eldegoss",
+     "condition": "Level 20",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 438,
+  "chain": {
+   "species": "wooloo",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "dubwool",
+     "condition": "Level 24",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 439,
+  "chain": {
+   "species": "chewtle",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "drednaw",
+     "condition": "Level 22",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 440,
+  "chain": {
+   "species": "yamper",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "boltund",
+     "condition": "Level 25",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 441,
+  "chain": {
+   "species": "rolycoly",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "carkol",
+     "condition": "Level 18",
+     "evolves_to": [
+      {
+       "species": "coalossal",
+       "condition": "Level 34",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 442,
+  "chain": {
+   "species": "applin",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "flapple",
+     "condition": "Use Tart Apple",
+     "evolves_to": []
+    },
+    {
+     "species": "appletun",
+     "condition": "Use Sweet Apple",
+     "evolves_to": []
+    },
+    {
+     "species": "dipplin",
+     "condition": "Use Syrupy Apple",
+     "evolves_to": [
+      {
+       "species": "hydrapple",
+       "condition": "Level up knowing Dragon Cheer",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 443,
+  "chain": {
+   "species": "silicobra",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "sandaconda",
+     "condition": "Level 36",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 444,
+  "chain": {
+   "species": "cramorant",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 445,
+  "chain": {
+   "species": "arrokuda",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "barraskewda",
+     "condition": "Level 26",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 446,
+  "chain": {
+   "species": "toxel",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "toxtricity",
+     "condition": "Level 30",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 447,
+  "chain": {
+   "species": "sizzlipede",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "centiskorch",
+     "condition": "Level 28",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 448,
+  "chain": {
+   "species": "clobbopus",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "grapploct",
+     "condition": "Level up knowing Taunt",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 449,
+  "chain": {
+   "species": "sinistea",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "polteageist",
+     "condition": "Use Chipped Pot",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 450,
+  "chain": {
+   "species": "hatenna",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "hattrem",
+     "condition": "Level 32",
+     "evolves_to": [
+      {
+       "species": "hatterene",
+       "condition": "Level 42",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 451,
+  "chain": {
+   "species": "impidimp",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "morgrem",
+     "condition": "Level 32",
+     "evolves_to": [
+      {
+       "species": "grimmsnarl",
+       "condition": "Level 42",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 452,
+  "chain": {
+   "species": "milcery",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "alcremie",
+     "condition": "holding Ribbon Sweet (dusk)",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 453,
+  "chain": {
+   "species": "falinks",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 454,
+  "chain": {
+   "species": "pincurchin",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 455,
+  "chain": {
+   "species": "snom",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "frosmoth",
+     "condition": "Level up high friendship (night)",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 456,
+  "chain": {
+   "species": "stonjourner",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 457,
+  "chain": {
+   "species": "eiscue",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 458,
+  "chain": {
+   "species": "indeedee",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 459,
+  "chain": {
+   "species": "morpeko",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 460,
+  "chain": {
+   "species": "cufant",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "copperajah",
+     "condition": "Level 34",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 461,
+  "chain": {
+   "species": "dracozolt",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 462,
+  "chain": {
+   "species": "arctozolt",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 463,
+  "chain": {
+   "species": "dracovish",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 464,
+  "chain": {
+   "species": "arctovish",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 465,
+  "chain": {
+   "species": "duraludon",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "archaludon",
+     "condition": "Use Metal Alloy",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 466,
+  "chain": {
+   "species": "dreepy",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "drakloak",
+     "condition": "Level 50",
+     "evolves_to": [
+      {
+       "species": "dragapult",
+       "condition": "Level 60",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 467,
+  "chain": {
+   "species": "zacian",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 468,
+  "chain": {
+   "species": "zamazenta",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 469,
+  "chain": {
+   "species": "eternatus",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 470,
+  "chain": {
+   "species": "kubfu",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "urshifu",
+     "condition": "Use Scroll Of Waters",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 471,
+  "chain": {
+   "species": "zarude",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 472,
+  "chain": {
+   "species": "regieleki",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 473,
+  "chain": {
+   "species": "regidrago",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 474,
+  "chain": {
+   "species": "glastrier",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 475,
+  "chain": {
+   "species": "spectrier",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 476,
+  "chain": {
+   "species": "calyrex",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 477,
+  "chain": {
+   "species": "enamorus",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 478,
+  "chain": {
+   "species": "sprigatito",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "floragato",
+     "condition": "Level 16",
+     "evolves_to": [
+      {
+       "species": "meowscarada",
+       "condition": "Level 36",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 479,
+  "chain": {
+   "species": "fuecoco",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "crocalor",
+     "condition": "Level 16",
+     "evolves_to": [
+      {
+       "species": "skeledirge",
+       "condition": "Level 36",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 480,
+  "chain": {
+   "species": "quaxly",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "quaxwell",
+     "condition": "Level 16",
+     "evolves_to": [
+      {
+       "species": "quaquaval",
+       "condition": "Level 36",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 481,
+  "chain": {
+   "species": "lechonk",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "oinkologne",
+     "condition": "Level 18 (female)",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 482,
+  "chain": {
+   "species": "tarountula",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "spidops",
+     "condition": "Level 15",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 483,
+  "chain": {
+   "species": "nymble",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "lokix",
+     "condition": "Level 24",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 484,
+  "chain": {
+   "species": "pawmi",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "pawmo",
+     "condition": "Level 18",
+     "evolves_to": [
+      {
+       "species": "pawmot",
+       "condition": "Level up",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 485,
+  "chain": {
+   "species": "tandemaus",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "maushold",
+     "condition": "Level 25",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 486,
+  "chain": {
+   "species": "fidough",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "dachsbun",
+     "condition": "Level 26",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 487,
+  "chain": {
+   "species": "smoliv",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "dolliv",
+     "condition": "Level 25",
+     "evolves_to": [
+      {
+       "species": "arboliva",
+       "condition": "Level 35",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 488,
+  "chain": {
+   "species": "squawkabilly",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 489,
+  "chain": {
+   "species": "nacli",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "naclstack",
+     "condition": "Level 24",
+     "evolves_to": [
+      {
+       "species": "garganacl",
+       "condition": "Level 38",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 490,
+  "chain": {
+   "species": "charcadet",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "armarouge",
+     "condition": "Use Auspicious Armor",
+     "evolves_to": []
+    },
+    {
+     "species": "ceruledge",
+     "condition": "Use Malicious Armor",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 491,
+  "chain": {
+   "species": "tadbulb",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "bellibolt",
+     "condition": "Use Thunder Stone",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 492,
+  "chain": {
+   "species": "wattrel",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "kilowattrel",
+     "condition": "Level 25",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 493,
+  "chain": {
+   "species": "maschiff",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "mabosstiff",
+     "condition": "Level 30",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 494,
+  "chain": {
+   "species": "shroodle",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "grafaiai",
+     "condition": "Level 28",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 495,
+  "chain": {
+   "species": "bramblin",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "brambleghast",
+     "condition": "Level up",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 496,
+  "chain": {
+   "species": "toedscool",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "toedscruel",
+     "condition": "Level 30",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 497,
+  "chain": {
+   "species": "klawf",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 498,
+  "chain": {
+   "species": "capsakid",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "scovillain",
+     "condition": "Use Fire Stone",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 499,
+  "chain": {
+   "species": "rellor",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "rabsca",
+     "condition": "Level up",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 500,
+  "chain": {
+   "species": "flittle",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "espathra",
+     "condition": "Level 35",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 501,
+  "chain": {
+   "species": "tinkatink",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "tinkatuff",
+     "condition": "Level 24",
+     "evolves_to": [
+      {
+       "species": "tinkaton",
+       "condition": "Level 38",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 502,
+  "chain": {
+   "species": "wiglett",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "wugtrio",
+     "condition": "Level 26",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 503,
+  "chain": {
+   "species": "bombirdier",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 504,
+  "chain": {
+   "species": "finizen",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "palafin",
+     "condition": "Level 38",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 505,
+  "chain": {
+   "species": "varoom",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "revavroom",
+     "condition": "Level 40",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 506,
+  "chain": {
+   "species": "cyclizar",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 507,
+  "chain": {
+   "species": "orthworm",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 508,
+  "chain": {
+   "species": "glimmet",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "glimmora",
+     "condition": "Level 35",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 509,
+  "chain": {
+   "species": "greavard",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "houndstone",
+     "condition": "Level 30 (night)",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 510,
+  "chain": {
+   "species": "flamigo",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 511,
+  "chain": {
+   "species": "cetoddle",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "cetitan",
+     "condition": "Use Ice Stone",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 512,
+  "chain": {
+   "species": "veluza",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 513,
+  "chain": {
+   "species": "dondozo",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 514,
+  "chain": {
+   "species": "tatsugiri",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 515,
+  "chain": {
+   "species": "great-tusk",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 516,
+  "chain": {
+   "species": "scream-tail",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 517,
+  "chain": {
+   "species": "brute-bonnet",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 518,
+  "chain": {
+   "species": "flutter-mane",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 519,
+  "chain": {
+   "species": "slither-wing",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 520,
+  "chain": {
+   "species": "sandy-shocks",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 521,
+  "chain": {
+   "species": "iron-treads",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 522,
+  "chain": {
+   "species": "iron-bundle",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 523,
+  "chain": {
+   "species": "iron-hands",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 524,
+  "chain": {
+   "species": "iron-jugulis",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 525,
+  "chain": {
+   "species": "iron-moth",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 526,
+  "chain": {
+   "species": "iron-thorns",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 527,
+  "chain": {
+   "species": "frigibax",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "arctibax",
+     "condition": "Level 35",
+     "evolves_to": [
+      {
+       "species": "baxcalibur",
+       "condition": "Level 54",
+       "evolves_to": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": 528,
+  "chain": {
+   "species": "gimmighoul",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "gholdengo",
+     "condition": "Gimmighoul Coins",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 529,
+  "chain": {
+   "species": "wo-chien",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 530,
+  "chain": {
+   "species": "chien-pao",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 531,
+  "chain": {
+   "species": "ting-lu",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 532,
+  "chain": {
+   "species": "chi-yu",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 533,
+  "chain": {
+   "species": "roaring-moon",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 534,
+  "chain": {
+   "species": "iron-valiant",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 535,
+  "chain": {
+   "species": "koraidon",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 536,
+  "chain": {
+   "species": "miraidon",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 537,
+  "chain": {
+   "species": "walking-wake",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 538,
+  "chain": {
+   "species": "iron-leaves",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 539,
+  "chain": {
+   "species": "poltchageist",
+   "condition": "",
+   "evolves_to": [
+    {
+     "species": "sinistcha",
+     "condition": "Use Masterpiece Teacup",
+     "evolves_to": []
+    }
+   ]
+  }
+ },
+ {
+  "id": 540,
+  "chain": {
+   "species": "okidogi",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 541,
+  "chain": {
+   "species": "munkidori",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 542,
+  "chain": {
+   "species": "fezandipiti",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 543,
+  "chain": {
+   "species": "ogerpon",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 544,
+  "chain": {
+   "species": "gouging-fire",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 545,
+  "chain": {
+   "species": "raging-bolt",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 546,
+  "chain": {
+   "species": "iron-crown",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 547,
+  "chain": {
+   "species": "iron-boulder",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 548,
+  "chain": {
+   "species": "terapagos",
+   "condition": "",
+   "evolves_to": []
+  }
+ },
+ {
+  "id": 549,
+  "chain": {
+   "species": "pecharunt",
+   "condition": "",
+   "evolves_to": []
+  }
+ }
+]

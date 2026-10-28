@@ -1,0 +1,8 @@
+# Training extras on top of requirements.txt.
+# GPU (NVIDIA, CUDA 12.8):  pip install torch==2.11.0 torchvision==0.26.0 --index-url https://download.pytorch.org/whl/cu128
+# CPU only:                 pip install torch==2.11.0 torchvision==0.26.0 --index-url https://download.pytorch.org/whl/cpu
+-r requirements.txt
+matplotlib==3.11.2
+scikit-learn==1.9.1
+onnx==1.23.2
+onnxscript==0.7.2

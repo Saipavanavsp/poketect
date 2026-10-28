@@ -1,0 +1,25 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\Saipa\pokedex-ai\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Saipa\pokedex-ai
+plugins: anyio-4.15.1
+collecting ... collected 16 items
+
+backend/tests/test_api.py::test_health PASSED                            [  6%]
+backend/tests/test_api.py::test_list_and_filter PASSED                   [ 12%]
+backend/tests/test_api.py::test_detail_has_everything PASSED             [ 18%]
+backend/tests/test_api.py::test_name_normalisation PASSED                [ 25%]
+backend/tests/test_api.py::test_evolutions PASSED                        [ 31%]
+backend/tests/test_api.py::test_trainer_and_edits PASSED                 [ 37%]
+backend/tests/test_api.py::test_map_nearest PASSED                       [ 43%]
+backend/tests/test_api.py::test_encounters_on_map PASSED                 [ 50%]
+backend/tests/test_api.py::test_chat_tools_answer_from_database PASSED   [ 56%]
+backend/tests/test_api.py::test_chat_without_key_reports_error PASSED    [ 62%]
+backend/tests/test_chat_loop.py::test_tool_loop_streams_answer PASSED    [ 68%]
+backend/tests/test_identify.py::test_identifies_pikachu PASSED           [ 75%]
+backend/tests/test_identify.py::test_low_confidence_says_not_sure PASSED [ 81%]
+backend/tests/test_identify.py::test_rejects_non_images PASSED           [ 87%]
+backend/tests/test_identify.py::test_rejects_empty_upload PASSED         [ 93%]
+backend/tests/test_identify.py::test_model_missing_returns_503 PASSED    [100%]
+
+============================= 16 passed in 3.48s ==============================

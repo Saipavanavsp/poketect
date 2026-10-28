@@ -1,0 +1,14 @@
+# Render blueprint for the API (New > Blueprint > pick this repo). Set ANTHROPIC_API_KEY in the dashboard.
+services:
+  - type: web
+    name: pokedex-ai-api
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: .
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: CORS_ORIGINS
+        value: https://saipavanavsp.github.io,https://pokedex-ai.vercel.app

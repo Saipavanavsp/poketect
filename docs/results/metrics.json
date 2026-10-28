@@ -1,0 +1,70 @@
+{
+  "images": 1025,
+  "classes": 1025,
+  "top1": 0.9746,
+  "top3": 0.9922,
+  "confident_share": 0.8634,
+  "precision_when_confident": 0.9966,
+  "by_generation": {
+    "1": 0.9669,
+    "2": 0.99,
+    "3": 0.9778,
+    "4": 0.972,
+    "5": 0.9679,
+    "6": 0.9861,
+    "7": 0.9886,
+    "8": 1.0,
+    "9": 0.9417
+  },
+  "by_image_kind": {
+    "artwork_shiny": {
+      "top1": 0.9914,
+      "n": 116
+    },
+    "bw": {
+      "top1": 1.0,
+      "n": 131
+    },
+    "crystal": {
+      "top1": 0.9474,
+      "n": 19
+    },
+    "emerald": {
+      "top1": 1.0,
+      "n": 44
+    },
+    "home": {
+      "top1": 1.0,
+      "n": 108
+    },
+    "home_shiny": {
+      "top1": 1.0,
+      "n": 115
+    },
+    "platinum": {
+      "top1": 1.0,
+      "n": 44
+    },
+    "sprite": {
+      "top1": 1.0,
+      "n": 141
+    },
+    "sprite_back": {
+      "top1": 0.85,
+      "n": 120
+    },
+    "sprite_shiny": {
+      "top1": 1.0,
+      "n": 112
+    },
+    "xy": {
+      "top1": 0.92,
+      "n": 75
+    }
+  },
+  "external_showdown": {
+    "images": 300,
+    "top1": 0.9833,
+    "top3": 0.9933
+  }
+}

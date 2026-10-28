@@ -1,0 +1,58 @@
+@import 'leaflet/dist/leaflet.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { background: #4A1220; }
+  body {
+    @apply bg-paper font-serif text-ink antialiased;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  h1, h2, h3, h4 { @apply font-display font-semibold leading-tight text-ink; letter-spacing: 0.01em; }
+  :focus-visible { outline: 3px solid #E3A33B; outline-offset: 2px; }
+  ::selection { background: #E2D3B0; }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 font-display text-[17px] font-semibold
+      transition-colors disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-shell { @apply bg-shell text-paper-soft shadow-bezel hover:bg-shell-light active:translate-y-px; }
+  .btn-quiet { @apply border border-stone bg-paper-soft text-ink hover:bg-paper-edge; }
+  .field {
+    @apply w-full rounded-md border border-stone bg-paper-soft px-3 py-2 font-serif text-ink placeholder:text-ink-faint
+      focus:border-shell focus:outline-none;
+  }
+  .panel { @apply rounded-lg border border-paper-edge bg-paper-soft; }
+  .lcd {
+    @apply rounded-md bg-lcd text-lcd-ink shadow-inset;
+    background-image: repeating-linear-gradient(0deg, rgba(47, 51, 38, 0.045) 0 1px, transparent 1px 3px);
+  }
+  .num { font-variant-numeric: tabular-nums; @apply font-display; }
+}
+
+/* Leaflet sits on the warm-gray "sea"; tooltips match the paper. */
+.leaflet-container { background: #B9AFA3; font-family: 'Source Serif 4', Georgia, serif; }
+.leaflet-tooltip {
+  background: #F7EFDC; color: #3A3430; border: 1px solid #B9AFA3; box-shadow: none;
+  font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 600;
+}
+.leaflet-tooltip.place-label {
+  background: transparent; border: 0; padding: 0; font-size: 14px; color: #3A3430;
+  text-shadow: 0 0 3px #F1E6CC, 0 0 3px #F1E6CC, 0 0 2px #F1E6CC, 1px 1px 0 #F1E6CC, -1px -1px 0 #F1E6CC;
+}
+.leaflet-tooltip.place-label::before { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+@keyframes sweep { from { transform: translateY(-100%); } to { transform: translateY(100%); } }
+.scan-sweep::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(227, 163, 59, 0.25) 50%, transparent 60%);
+  animation: sweep 1.4s linear infinite;
+}

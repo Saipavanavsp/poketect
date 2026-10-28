@@ -1,0 +1,29 @@
+# Secrets - never commit the real key
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Node
+node_modules/
+frontend/dist/
+
+# Large / regenerable data (rebuild with scripts/fetch_data.py + scripts/load_db.py)
+data/raw/
+data/images/
+data/kaggle/
+data/external/
+data/uploads/
+data/*.db
+data/fetch_log.txt
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

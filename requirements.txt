@@ -1,0 +1,15 @@
+# API server + data scripts (inference uses ONNX Runtime, so PyTorch is not needed to serve)
+fastapi==0.162.0
+uvicorn[standard]==0.54.0
+python-multipart==0.0.32
+SQLAlchemy==2.1.6
+pydantic==2.14.1
+python-dotenv==1.2.4
+anthropic==2.3.0
+onnxruntime==1.31.1
+numpy==2.5.4
+pillow==13.0.0
+requests==2.34.2
+# tests
+pytest==9.2.0
+httpx==0.28.1
