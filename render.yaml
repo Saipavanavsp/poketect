@@ -10,5 +10,7 @@ services:
     envVars:
       - key: ANTHROPIC_API_KEY
         sync: false
+      - key: ADMIN_TOKEN        # required for trainer edits; copy it from the Environment tab
+        generateValue: true
       - key: CORS_ORIGINS
         value: https://saipavanavsp.github.io,https://poketect.vercel.app

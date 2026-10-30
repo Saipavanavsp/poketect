@@ -74,6 +74,12 @@ describe('softmaxTop', () => {
     expect(top.map(([i]) => i)).toEqual([1, 2, 0])
     expect(top.reduce((a, [, p]) => a + p, 0)).toBeLessThanOrEqual(1)
   })
+  it('a temperature above 1 softens the top probability without changing the order', () => {
+    const sharp = softmaxTop(new Float32Array([1, 5, 3, 0]), 3)
+    const soft = softmaxTop(new Float32Array([1, 5, 3, 0]), 3, 2)
+    expect(soft.map(([i]) => i)).toEqual(sharp.map(([i]) => i))
+    expect(soft[0][1]).toBeLessThan(sharp[0][1])
+  })
 })
 
 describe('offline assistant', () => {

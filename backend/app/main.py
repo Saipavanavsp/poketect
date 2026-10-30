@@ -7,8 +7,9 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from . import assistant, geo, identifier, models, services
-from .config import CORS_ORIGINS, UPLOAD_DIR
+from .config import CORS_ORIGINS, MAX_UPLOAD_BYTES
 from .database import Base, engine, get_db
+from .security import chat_limit, identify_limit, require_admin
 from .seed_data import REGIONS
 
 Base.metadata.create_all(engine)
@@ -16,8 +17,6 @@ Base.metadata.create_all(engine)
 app = FastAPI(title="Poketect API", version="1.0.0",
               description="Fan project, not for commercial use. Data from PokéAPI (https://pokeapi.co).")
 app.add_middleware(CORSMiddleware, allow_origins=CORS_ORIGINS, allow_methods=["*"], allow_headers=["*"])
-
-MAX_UPLOAD_BYTES = 8 * 1024 * 1024
 
 
 @app.get("/api/health")
@@ -49,21 +48,30 @@ def list_types(db: Session = Depends(get_db)):
 
 # ----------------------------------------------------------------------------- Identify
 
-@app.post("/api/identify")
+async def read_capped(file: UploadFile, limit: int) -> bytes:
+    """Read the upload in chunks and stop as soon as it passes the limit."""
+    chunks, size = [], 0
+    while chunk := await file.read(1024 * 1024):
+        size += len(chunk)
+        if size > limit:
+            raise HTTPException(413, f"Image is larger than {limit // (1024 * 1024)} MB")
+        chunks.append(chunk)
+    return b"".join(chunks)
+
+
+@app.post("/api/identify", dependencies=[Depends(identify_limit)])
 async def identify(file: UploadFile = File(...), db: Session = Depends(get_db)):
-    data = await file.read()
+    data = await read_capped(file, MAX_UPLOAD_BYTES)
     if not data:
         raise HTTPException(400, "Empty upload")
-    if len(data) > MAX_UPLOAD_BYTES:
-        raise HTTPException(413, "Image is larger than 8 MB")
     try:
-        result = identifier.identify(data)
+        result = identifier.identify(data)  # the image is only decoded in memory, never stored
     except identifier.ModelNotReady as exc:
         raise HTTPException(503, str(exc)) from exc
+    except identifier.ImageTooLarge as exc:
+        raise HTTPException(413, str(exc)) from exc
     except ValueError as exc:
         raise HTTPException(400, str(exc)) from exc
-    UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
-    (UPLOAD_DIR / "last_upload.bin").write_bytes(data)
     for pred in result["predictions"]:
         p = services.find_pokemon(db, pred["name"])
         pred.update(services.summary(p) if p else {})
@@ -105,7 +113,8 @@ def get_trainer(db: Session = Depends(get_db)):
     return services.trainer_profile(db)
 
 
-@app.put("/api/trainer")
+# Reads are public; every edit goes through require_admin.
+@app.put("/api/trainer", dependencies=[Depends(require_admin)])
 def update_trainer(body: TrainerUpdate, db: Session = Depends(get_db)):
     t = _trainer(db)
     for field, value in body.model_dump(exclude_none=True).items():
@@ -114,7 +123,7 @@ def update_trainer(body: TrainerUpdate, db: Session = Depends(get_db)):
     return services.trainer_profile(db)
 
 
-@app.put("/api/trainer/badges/{badge_id}")
+@app.put("/api/trainer/badges/{badge_id}", dependencies=[Depends(require_admin)])
 def update_badge(badge_id: int, body: BadgeUpdate, db: Session = Depends(get_db)):
     badge = db.get(models.Badge, badge_id)
     if not badge:
@@ -124,7 +133,7 @@ def update_badge(badge_id: int, body: BadgeUpdate, db: Session = Depends(get_db)
     return services.trainer_profile(db)
 
 
-@app.put("/api/trainer/team/{member_id}")
+@app.put("/api/trainer/team/{member_id}", dependencies=[Depends(require_admin)])
 def update_team_member(member_id: int, body: TeamMemberUpdate, db: Session = Depends(get_db)):
     member = db.get(models.TeamMember, member_id)
     if not member:
@@ -181,7 +190,7 @@ class ChatRequest(BaseModel):
     context: dict = Field(default_factory=dict)
 
 
-@app.post("/api/chat")
+@app.post("/api/chat", dependencies=[Depends(chat_limit)])  # each call spends Claude API credit
 def chat(body: ChatRequest, db: Session = Depends(get_db)):
     return StreamingResponse(assistant.stream_chat(db, body.messages, body.context), media_type="text/event-stream",
                              headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"})

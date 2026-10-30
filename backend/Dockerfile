@@ -16,4 +16,5 @@ RUN python scripts/load_db.py
 WORKDIR /app/backend
 ENV PORT=8000
 EXPOSE 8000
-CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port ${PORT}"]
+# --proxy-headers: behind Render's proxy, take the visitor's IP from X-Forwarded-For (used by the rate limits).
+CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port ${PORT} --proxy-headers --forwarded-allow-ips='*'"]

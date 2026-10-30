@@ -88,9 +88,10 @@ export function mirror(x, size) {
   return out
 }
 
-export function softmaxTop(logits, k) {
+/** Top-k softmax probabilities; `temperature` is the calibration from labels.json (same as the server). */
+export function softmaxTop(logits, k, temperature = 1) {
   const max = Math.max(...logits)
-  const exps = Array.from(logits, (v) => Math.exp(v - max))
+  const exps = Array.from(logits, (v) => Math.exp((v - max) / temperature))
   const sum = exps.reduce((a, b) => a + b, 0)
   return exps
     .map((v, i) => [i, v / sum])
@@ -113,7 +114,7 @@ export async function identify(file) {
     const raw = output[session.outputNames[0]].data
     const classes = raw.length / 2
     const logits = Float32Array.from({ length: classes }, (_, i) => (raw[i] + raw[classes + i]) / 2)
-    const top = softmaxTop(logits, 3)
+    const top = softmaxTop(logits, 3, labels.temperature || 1)
     const byName = new Map(index.map((p) => [p.name, p]))
     const predictions = top.map(([i, p]) => ({
       name: labels.classes[i],

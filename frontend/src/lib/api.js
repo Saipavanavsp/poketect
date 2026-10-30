@@ -21,12 +21,42 @@ async function getJSON(url, { fresh = false } = {}) {
   return request
 }
 
-async function send(method, path, body) {
+// Edits need the backend's ADMIN_TOKEN when it has one: asked for once on a 401, kept in this browser.
+const ADMIN_KEY = 'poketect.admin-token'
+
+function adminToken() {
+  try {
+    return localStorage.getItem(ADMIN_KEY) || ''
+  } catch {
+    return ''
+  }
+}
+
+async function send(method, path, body, retried = false) {
+  const token = adminToken()
   const res = await fetch(`${API}${path}`, {
     method,
-    headers: { 'Content-Type': 'application/json' },
+    headers: { 'Content-Type': 'application/json', ...(token && { Authorization: `Bearer ${token}` }) },
     body: JSON.stringify(body),
   })
+  if (res.status === 401 && !retried) {
+    const entered = window.prompt('This Poketect server needs the admin token to save edits:')
+    if (entered) {
+      try {
+        localStorage.setItem(ADMIN_KEY, entered.trim())
+      } catch {
+        /* ignore */
+      }
+      return send(method, path, body, true)
+    }
+  }
+  if (res.status === 401) {
+    try {
+      localStorage.removeItem(ADMIN_KEY)
+    } catch {
+      /* ignore */
+    }
+  }
   const data = await res.json().catch(() => ({}))
   if (!res.ok) throw new Error(data.detail || `Request failed (${res.status})`)
   return data

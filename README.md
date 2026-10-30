@@ -11,23 +11,29 @@ from its own database through Claude tool calls.
 
 ## Highlights
 
-- **Image identification with a CNN.** MobileNetV2 fine-tuned with transfer learning on 1,025
-  Pokémon (Gen 1 to 9). It reaches **97.5% top-1 / 99.2% top-3** accuracy on held-out images. The model is exported to
-  ONNX and runs **in the browser** on the live site, or on the server via `POST /api/identify`.
+- **Image identification with a CNN.** EfficientNet-B0 fine-tuned with transfer learning on 1,025
+  Pokémon (Gen 1 to 9). It reaches **99.8% top-1** on unseen sprite styles and **97.6% top-1 with
+  only 30% of the Pokémon visible**. Confidence scores are calibrated with temperature scaling (ECE
+  0.026 on the real-world test set). The model is exported to ONNX and runs **in the browser** on the
+  live site, or on the server via `POST /api/identify`.
 - **Complete data pipeline.** About 6,000 PokéAPI calls with retries, rate limiting and a disk
   cache, then SQLite through SQLAlchemy. That covers 1,025 Pokémon, 797 moves, 79,120 learnset
   rows, 540 evolution chains and 16,447 wild encounters.
-- **Voice assistant built on Claude tool use.** Seven tools (`get_pokemon_info`, `get_attacks`,
-  `get_evolutions`, `find_nearest_gym`, `find_nearest_pokemon_center`, `get_trainer_profile`,
-  `identify_last_uploaded_image`) ground every answer in the database. Replies stream over
-  server-sent events and are spoken with the Web Speech API. Continuous listening is supported.
+- **Voice assistant with two engines.** With the backend running, Claude answers using tool calls.
+  Seven tools (`get_pokemon_info`, `get_attacks`, `get_evolutions`, `find_nearest_gym`,
+  `find_nearest_pokemon_center`, `get_trainer_profile`, `identify_last_uploaded_image`) ground
+  every answer in the database, and replies stream over server-sent events. **The live demo has no
+  backend, so its chat is a local keyword/intent router** that calls the same seven tools over the
+  exported data. It answers the same questions but is not an LLM and won't handle free-form
+  conversation. Both engines speak replies with the Web Speech API.
 - **Interactive maps.** Leaflet over original schematic maps of Kanto, Johto, Hoenn and Sinnoh
   with 32 gyms, 52 Pokémon Centers and encounter locations. It finds the nearest gym or Center from
   any point you click.
 - **Editable trainer profile.** Profile, badges and a team of seven are stored in the database and
   editable from the UI.
-- **Production touches.** 25 automated tests (pytest and Vitest), GitHub Actions CI, Docker and
-  docker-compose, a Render blueprint, a Vercel config, a mobile layout, and loading and error states
+- **Production touches.** Automated tests (pytest and Vitest), GitHub Actions CI, Docker and
+  docker-compose, a Render blueprint, a Vercel config, an optional admin token for edits, per-IP rate
+  limits, hardened uploads, SQLite or PostgreSQL, a mobile layout, and loading and error states
   throughout.
 
 ## Screenshots
@@ -113,7 +119,7 @@ matrix of the most-confused classes is in
 | Layer | Tools |
 |---|---|
 | Frontend | React 18, Vite 5, Tailwind CSS 3, React Router, Leaflet, ONNX Runtime Web, Web Speech API |
-| Backend | Python 3.12, FastAPI, SQLAlchemy 2, SQLite, ONNX Runtime, Anthropic SDK (Claude tool use + streaming) |
+| Backend | Python 3.12, FastAPI, SQLAlchemy 2, SQLite (PostgreSQL via `DATABASE_URL`), ONNX Runtime, Anthropic SDK (Claude tool use + streaming) |
 | ML | PyTorch 2.11, torchvision MobileNetV2, CUDA (CPU fallback), ONNX export |
 | Data | PokéAPI REST, requests with urllib3 retry, threaded downloader with a global rate limiter |
 | Testing / CI | pytest, FastAPI TestClient, Vitest, GitHub Actions, Playwright (screenshots) |
@@ -177,7 +183,7 @@ Deployment (GitHub Pages, Vercel, Render) is covered in [docs/DEPLOYMENT.md](doc
 |---|---|---|
 | GET | `/api/pokemon?q=&type=&generation=` | Search and filter |
 | GET | `/api/pokemon/{name or id}` | Full entry: stats, moves, evolution tree, encounters |
-| POST | `/api/identify` | Upload an image and get the top 3 predictions with confidence ("not sure" below 50%) |
+| POST | `/api/identify` | Upload an image (PNG/JPEG/WebP/GIF/BMP, max 8 MB, 40 MP) and get the top 3 predictions with calibrated confidence ("not sure" below 50%) |
 | GET / PUT | `/api/trainer`, `/api/trainer/badges/{id}`, `/api/trainer/team/{id}` | Read and edit the trainer |
 | GET | `/api/map/regions`, `/api/map/nearest`, `/api/map/{region}/places/{slug}/pokemon` | Map data, nearest gym and Center, Pokémon at a place |
 | POST | `/api/chat` | Claude conversation with tools, streamed as server-sent events |
@@ -191,7 +197,8 @@ backend/app/
   database.py      SQLAlchemy engine, session, DB dependency
   models.py        Tables: Pokémon, moves, learnsets, evolutions, encounters, trainer, badges, team, places, gyms, centers
   services.py      Shared queries and serializers used by the API and by the chat tools
-  identifier.py    ONNX Runtime inference with the same preprocessing as training
+  identifier.py    ONNX Runtime inference with the same preprocessing as training, upload checks, calibration
+  security.py      Optional admin token for edits, per-IP rate limits for identify and chat
   assistant.py     Claude system prompt, 7 tool schemas, tool execution, streaming tool loop
   geo.py           Route markers, distance maths, mapping PokéAPI locations onto the maps
   seed_data.py     Original schematic maps for 4 regions, 32 gyms, 52 Centers, trainer seed

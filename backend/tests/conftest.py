@@ -10,7 +10,6 @@ ROOT = Path(__file__).resolve().parents[2]
 FIXTURES = Path(__file__).parent / "fixtures"
 _db_file = Path(tempfile.mkdtemp()) / "test.db"
 os.environ["DATABASE_URL"] = f"sqlite:///{_db_file.as_posix()}"
-os.environ["UPLOAD_DIR"] = str(_db_file.parent / "uploads")
 os.environ["ANTHROPIC_API_KEY"] = ""
 sys.path[:0] = [str(ROOT / "backend"), str(ROOT / "scripts")]
 
