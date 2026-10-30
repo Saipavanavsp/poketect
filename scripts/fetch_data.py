@@ -147,6 +147,11 @@ def pick_description(species: dict) -> str:
 def image_urls(sprites: dict) -> dict[str, str]:
     other = sprites.get("other") or {}
     versions = sprites.get("versions") or {}
+    showdown = other.get("showdown") or {}
+
+    def version(gen, game, key="front_default"):
+        return ((versions.get(gen) or {}).get(game) or {}).get(key)
+
     candidates = {
         "artwork": (other.get("official-artwork") or {}).get("front_default"),
         "artwork_shiny": (other.get("official-artwork") or {}).get("front_shiny"),
@@ -161,8 +166,22 @@ def image_urls(sprites: dict) -> dict[str, str]:
         "crystal": ((versions.get("generation-ii") or {}).get("crystal") or {}).get("front_transparent"),
         "usum": ((versions.get("generation-vii") or {}).get("ultra-sun-ultra-moon") or {}).get("front_default"),
         "xy": ((versions.get("generation-vi") or {}).get("x-y") or {}).get("front_default"),
+        # Extra styles for robustness (added after real-world testing showed the model was too sprite-specific)
+        "yellow": version("generation-i", "yellow", "front_transparent"),
+        "gold": version("generation-ii", "gold", "front_transparent"),
+        "firered": version("generation-iii", "firered-leafgreen"),
+        "diamond": version("generation-iv", "diamond-pearl"),
+        "hgss": version("generation-iv", "heartgold-soulsilver"),
+        "hgss_shiny": version("generation-iv", "heartgold-soulsilver", "front_shiny"),
+        "bw_shiny": version("generation-v", "black-white", "front_shiny"),
+        "oras": version("generation-vi", "omegaruby-alphasapphire"),
+        "usum_shiny": version("generation-vii", "ultra-sun-ultra-moon", "front_shiny"),
+        "home_female": (other.get("home") or {}).get("front_female"),
+        "showdown": showdown.get("front_default"),
+        "showdown_shiny": showdown.get("front_shiny"),
+        "showdown_back": showdown.get("back_default"),
     }
-    return {k: v for k, v in candidates.items() if v and v.endswith(".png")}
+    return {k: v for k, v in candidates.items() if v and v.endswith((".png", ".gif"))}
 
 
 def parse_pokemon(species: dict, pokemon: dict) -> dict:
@@ -373,7 +392,8 @@ def main():
 
     if not args.skip_images:
         print("7/7 Images")
-        jobs = [(url, IMAGES / p["name"] / f"{variant}.png") for p in pokemon for variant, url in p["images"].items()]
+        jobs = [(url, IMAGES / p["name"] / f"{variant}{Path(url).suffix}")
+                for p in pokemon for variant, url in p["images"].items()]
         results, _ = parallel(lambda job: download(*job), jobs, "images", args.workers)
         print(f"  {sum(results.values())}/{len(jobs)} images saved to data/images/")
     else:

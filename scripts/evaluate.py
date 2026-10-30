@@ -1,39 +1,80 @@
-"""Evaluate the exported model (models/pokemon_cnn.onnx) exactly as the API runs it.
+"""Evaluate an exported model exactly as the API runs it (ONNX Runtime + identifier.preprocess).
 
-    .\\.venv\\Scripts\\python.exe scripts\\evaluate.py                    # held-out split
-    .\\.venv\\Scripts\\python.exe scripts\\evaluate.py --image pikachu.jpg # one image
+    .\\.venv\\Scripts\\python.exe scripts\\evaluate.py                       # current model, writes the report
+    .\\.venv\\Scripts\\python.exe scripts\\evaluate.py --model-dir data\\baseline_v1 --no-report
+    .\\.venv\\Scripts\\python.exe scripts\\evaluate.py --image pikachu.jpg    # one image
 
-Writes docs/results/metrics.json, evaluation.md and confusion_matrix.png.
+Test sets (from scripts/prepare_dataset.py, none used for training):
+  clean      one unseen sprite style per Pokémon (1,025 images)
+  hard       the same images cropped, shrunk, blurred and JPEG-compressed, like a bad upload
+  partial30  the clean images cropped so only 30% of the Pokémon is visible (3 different crops each)
+  real       732 real-world images (fan art, cards, toys, photos) of Gen 1 Pokémon, Public Domain set
+  real_partial30  the real-world images cropped to 30% of the subject
+  uploads    pictures users reported as wrong (backend/tests/fixtures/user_*.png)
 """
 import argparse
-import io
 import json
+import re
 import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
 import numpy as np
-from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "backend"))
 RESULTS = ROOT / "docs" / "results"
+CACHE = ROOT / "data" / "cache"
+FIXTURES = ROOT / "backend" / "tests" / "fixtures"
 
 from app import identifier  # noqa: E402
 
+SETS = [("clean", "val"), ("hard", "val_hard"), ("partial30", "val_partial30"), ("real", "test_real"),
+        ("real_partial30", "test_real_partial30")]
+TARGET = 0.90  # required top-1 accuracy with only 30% of the Pokémon visible
 
-def predict(path: Path):
-    return identifier.identify(path.read_bytes(), top_k=3)
+
+def use_model(model_dir: Path):
+    identifier.MODEL_PATH = model_dir / "pokemon_cnn.onnx"
+    identifier.LABELS_PATH = model_dir / "labels.json"
+    identifier._load.cache_clear()
 
 
-def confusion_plot(pairs, classes):
-    """Confusion matrix restricted to the 20 classes involved in the most mistakes (1025x1025 is unreadable)."""
+def score(items):
+    """items: [(true_label, path)] -> metrics + (true, predicted) pairs."""
+    pairs, top3, sure, sure_right = [], 0, 0, 0
+    for label, path in items:
+        result = identifier.identify(Path(path).read_bytes())
+        names = [p["name"] for p in result["predictions"]]
+        pairs.append((label, names[0]))
+        top3 += label in names
+        if result["confident"]:
+            sure += 1
+            sure_right += names[0] == label
+    n = len(pairs)
+    return {
+        "images": n,
+        "top1": round(sum(t == p for t, p in pairs) / n, 4),
+        "top3": round(top3 / n, 4),
+        "sure_share": round(sure / n, 4),
+        "precision_when_sure": round(sure_right / sure, 4) if sure else None,
+    }, pairs
+
+
+def upload_cases():
+    """backend/tests/fixtures/user_<pokemon>.png -> expected label from the filename."""
+    return [(re.sub(r"^user_", "", p.stem).replace("_", "-"), p) for p in sorted(FIXTURES.glob("user_*.png"))]
+
+
+def confusion_plot(pairs, path, title):
     import matplotlib
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
 
     mistakes = Counter(c for t, p in pairs if t != p for c in (t, p))
-    focus = [c for c, _ in mistakes.most_common(20)] or classes[:20]
+    focus = [c for c, _ in mistakes.most_common(20)]
+    if not focus:
+        return
     pos = {c: i for i, c in enumerate(focus)}
     mat = np.zeros((len(focus), len(focus)), dtype=int)
     for t, p in pairs:
@@ -43,112 +84,92 @@ def confusion_plot(pairs, classes):
     im = ax.imshow(mat, cmap="Reds")
     ax.set_xticks(range(len(focus)), focus, rotation=75, fontsize=8)
     ax.set_yticks(range(len(focus)), focus, fontsize=8)
-    ax.set_xlabel("predicted"), ax.set_ylabel("true")
-    ax.set_title("Confusion matrix - 20 most-confused classes (held-out set)")
+    ax.set_xlabel("predicted"), ax.set_ylabel("true"), ax.set_title(title)
     fig.colorbar(im, fraction=0.046)
     fig.tight_layout()
-    fig.savefig(RESULTS / "confusion_matrix.png", dpi=130)
+    fig.savefig(path, dpi=130)
     plt.close(fig)
 
 
-def external_eval(sample=300, seed=7):
-    """Extra check on Pokémon Showdown sprites (not in the training folders, but related to game sprites that are)."""
-    import random
-
-    import requests
-
-    out = ROOT / "data" / "external"
-    out.mkdir(parents=True, exist_ok=True)
-    pokemon = json.loads((ROOT / "data" / "processed" / "pokemon.json").read_text(encoding="utf-8"))
-    random.Random(seed).shuffle(pokemon)
-    hits = top3 = n = 0
-    for p in pokemon:
-        if n >= sample:
-            break
-        raw = json.loads((ROOT / "data" / "raw" / "pokemon" / f"{p['id']}.json").read_text(encoding="utf-8"))
-        url = ((raw["sprites"].get("other") or {}).get("showdown") or {}).get("front_default")
-        if not url:
-            continue
-        dest = out / f"{p['name']}.gif"
-        if not dest.exists():
-            resp = requests.get(url, timeout=30)
-            if not resp.ok:
-                continue
-            dest.write_bytes(resp.content)
-        frame = Image.open(dest).convert("RGBA")  # first animation frame
-        buf = io.BytesIO()
-        frame.save(buf, "PNG")
-        names = [x["name"] for x in identifier.identify(buf.getvalue())["predictions"]]
-        hits += names[0] == p["name"]
-        top3 += p["name"] in names
-        n += 1
-    return {"images": n, "top1": round(hits / n, 4), "top3": round(top3 / n, 4)}
+def evaluate(model_dir: Path):
+    use_model(model_dir)
+    rows = json.loads((CACHE / "manifest.json").read_text())["images"]
+    metrics, all_pairs = {}, {}
+    for name, split in SETS:
+        items = [(r["label"], CACHE / r["path"]) for r in rows if r["split"] == split]
+        metrics[name], all_pairs[name] = score(items)
+    uploads = []
+    for label, path in upload_cases():
+        result = identifier.identify(path.read_bytes())
+        top = result["predictions"][0]
+        uploads.append({"file": path.name, "expected": label, "predicted": top["name"],
+                        "confidence": top["confidence"], "correct": top["name"] == label})
+    metrics["uploads"] = uploads
+    return metrics, all_pairs
 
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--image", type=Path)
-    parser.add_argument("--skip-external", action="store_true")
+    parser.add_argument("--model-dir", type=Path, default=ROOT / "models")
+    parser.add_argument("--baseline-dir", type=Path, default=ROOT / "data" / "baseline_v1")
+    parser.add_argument("--no-report", action="store_true")
     args = parser.parse_args()
 
     if args.image:
-        print(json.dumps(predict(args.image), indent=2))
+        use_model(args.model_dir)
+        print(json.dumps(identifier.identify(args.image.read_bytes()), indent=2))
         return
 
-    split = json.loads((ROOT / "models" / "split.json").read_text())["val"]
-    classes = json.loads((ROOT / "models" / "labels.json").read_text())["classes"]
-    gens = {p["name"]: p["generation"] for p in json.loads((ROOT / "data" / "processed" / "pokemon.json").read_text(encoding="utf-8"))}
-    pairs, top3, confident, confident_right = [], 0, 0, 0
-    by_gen, by_kind = defaultdict(lambda: [0, 0]), defaultdict(lambda: [0, 0])
-    for name, rel in split:
-        result = predict(ROOT / rel)
-        names = [p["name"] for p in result["predictions"]]
-        right = names[0] == name
-        pairs.append((name, names[0]))
-        top3 += name in names
-        if result["confident"]:
-            confident += 1
-            confident_right += right
-        for bucket, key in ((by_gen, gens.get(name)), (by_kind, Path(rel).stem)):
-            bucket[key][0] += right
-            bucket[key][1] += 1
+    metrics, pairs = evaluate(args.model_dir)
+    print(json.dumps(metrics, indent=2))
+    if args.no_report:
+        return
 
-    n = len(pairs)
-    metrics = {
-        "images": n, "classes": len(classes),
-        "top1": round(sum(t == p for t, p in pairs) / n, 4), "top3": round(top3 / n, 4),
-        "confident_share": round(confident / n, 4),
-        "precision_when_confident": round(confident_right / confident, 4) if confident else None,
-        "by_generation": {g: round(r / t, 4) for g, (r, t) in sorted(by_gen.items())},
-        "by_image_kind": {k: {"top1": round(r / t, 4), "n": t} for k, (r, t) in sorted(by_kind.items())},
-    }
-    if not args.skip_external:
-        metrics["external_showdown"] = external_eval()
+    baseline = None
+    if args.baseline_dir.exists():
+        baseline, _ = evaluate(args.baseline_dir)
+        use_model(args.model_dir)
+    labels = json.loads((args.model_dir / "labels.json").read_text())
     RESULTS.mkdir(parents=True, exist_ok=True)
-    (RESULTS / "metrics.json").write_text(json.dumps(metrics, indent=2))
-    confusion_plot(pairs, classes)
+    (RESULTS / "metrics.json").write_text(json.dumps({"model": metrics, "baseline_v1": baseline}, indent=2))
+    confusion_plot(pairs["real"], RESULTS / "confusion_matrix.png", "20 most-confused classes, real-world test set")
 
-    lines = ["# Model evaluation", "",
-             f"Held-out set: **{n} images**, one unseen image per Pokémon across **{len(classes)} classes**.", "",
-             "| Metric | Value |", "|---|---|",
-             f"| Top-1 accuracy | {metrics['top1']:.1%} |", f"| Top-3 accuracy | {metrics['top3']:.1%} |",
-             f"| Predictions above 50% confidence | {metrics['confident_share']:.1%} |",
-             f"| Accuracy of those confident predictions | {(metrics['precision_when_confident'] or 0):.1%} |", ""]
-    if "external_showdown" in metrics:
-        ext = metrics["external_showdown"]
-        lines += ["## Different sprite set", "",
-                  f"{ext['images']} Pokémon Showdown sprites (first animation frame), a sprite set not in the training "
-                  f"folders: **top-1 {ext['top1']:.1%}, top-3 {ext['top3']:.1%}**. Many Showdown sprites are animated "
-                  "versions of game sprites the model did see, so this is not a real-world test. Photos, toys, cards and "
-                  "fan art have not been measured and will score lower; see docs/IMPROVING_ACCURACY.md.", ""]
-    lines += ["## By generation", "", "| Gen | Top-1 |", "|---|---|"]
-    lines += [f"| {g} | {a:.1%} |" for g, a in metrics["by_generation"].items()]
-    lines += ["", "## By held-out image style", "", "| Style | Images | Top-1 |", "|---|---|---|"]
-    lines += [f"| {k} | {v['n']} | {v['top1']:.1%} |" for k, v in metrics["by_image_kind"].items()]
-    lines += ["", "![Confusion matrix](confusion_matrix.png)", ""]
+    def row(label, key, fmt="{:.1%}"):
+        new = metrics[key]
+        old = baseline[key] if baseline else None
+        cells = [fmt.format(new["top1"]), fmt.format(new["top3"])]
+        prev = [fmt.format(old["top1"]), fmt.format(old["top3"])] if old else ["", ""]
+        return f"| {label} | {new['images']} | {prev[0]} | {prev[1]} | **{cells[0]}** | **{cells[1]}** |"
+
+    lines = [
+        "# Model evaluation", "",
+        f"Model: **{labels.get('arch', 'mobilenet_v2')}** at {labels['img_size']} px, {len(labels['classes'])} classes. "
+        "All numbers come from the ONNX model run through the same code as `POST /api/identify`.", "",
+        "| Test set | Images | v1 top-1 | v1 top-3 | v2 top-1 | v2 top-3 |", "|---|---|---|---|---|---|",
+        row("Clean: one unseen sprite style per Pokémon", "clean"),
+        row("Hard: same images cropped, low-res, blurred, JPEG", "hard"),
+        row("**30% visible**: clean images, only 30% of the Pokémon shown", "partial30"),
+        row("Real world: fan art, cards, toys, photos (Gen 1)", "real"),
+        row("Real world, 30% of the subject shown", "real_partial30"),
+        "",
+        f"**30%-visible target ({TARGET:.0%} top-1): "
+        f"{'met' if metrics['partial30']['top1'] >= TARGET else 'not met'}** "
+        f"({metrics['partial30']['top1']:.1%} on {metrics['partial30']['images']} crops of unseen sprite styles).", "",
+        "v1 was MobileNetV2 trained on clean sprites only. v2 adds animated-sprite frames and more game styles, "
+        "public-domain real-world images for Gen 1, Pokémon GO / HOME / Scarlet-Violet styles and alternate forms "
+        "from pokemondb.net, partial-view training (crops keeping 15-90% of the Pokémon), class-balanced sampling "
+        "and heavy low-quality augmentation.", "",
+        f"When v2 says it is sure (above 50%), it is right {metrics['real']['precision_when_sure'] or 0:.1%} of the time "
+        f"on real-world images and {metrics['hard']['precision_when_sure'] or 0:.1%} on hard ones.", "",
+        "## Reported uploads", "", "| File | Expected | v2 prediction | Confidence |", "|---|---|---|---|",
+    ]
+    lines += [f"| {u['file']} | {u['expected']} | {u['predicted']} {'✓' if u['correct'] else '✗'} | {u['confidence']:.0%} |"
+              for u in metrics["uploads"]]
+    lines += ["", "Real-world images exist only for Gen 1 in the public dataset, so later generations are tested on "
+              "sprites (clean and hard sets) only.", "", "![Confusion matrix](confusion_matrix.png)", ""]
     (RESULTS / "evaluation.md").write_text("\n".join(lines), encoding="utf-8")
-    print(json.dumps({k: metrics.get(k) for k in ("images", "top1", "top3", "confident_share",
-                                                  "precision_when_confident", "external_showdown")}, indent=2))
+    print("wrote docs/results/evaluation.md")
 
 
 if __name__ == "__main__":

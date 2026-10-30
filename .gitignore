@@ -18,9 +18,14 @@ data/raw/
 data/images/
 data/kaggle/
 data/external/
+data/external_real/
+data/cache/
+data/baseline_v1/
 data/uploads/
 data/*.db
 data/fetch_log.txt
+data/*_log.txt
+data/model_before_partial/
 
 # Editors / OS
 .vscode/

@@ -47,7 +47,9 @@ def identify(data: bytes, top_k: int = 3) -> dict:
         image.load()
     except Exception as exc:
         raise ValueError("That file is not a readable image.") from exc
-    logits = session.run(None, {session.get_inputs()[0].name: preprocess(image, meta["img_size"])})[0][0]
+    x = preprocess(image, meta["img_size"])
+    batch = np.concatenate([x, x[..., ::-1]])  # test-time augmentation: image + mirror, logits averaged
+    logits = session.run(None, {session.get_inputs()[0].name: np.ascontiguousarray(batch)})[0].mean(axis=0)
     probs = np.exp(logits - logits.max())
     probs /= probs.sum()
     top = np.argsort(probs)[::-1][:top_k]

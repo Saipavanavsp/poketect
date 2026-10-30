@@ -6,7 +6,10 @@ Re-running rebuilds the Pokémon tables but keeps any trainer edits unless --res
 import argparse
 import json
 import sys
+from collections import defaultdict
 from pathlib import Path
+
+from sqlalchemy import inspect, text
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "backend"))
@@ -42,6 +45,9 @@ def seed_trainer(db):
 def populate(db, folder=PROCESSED, reset_trainer=False):
     """(Re)build every table from processed JSON in `folder`. Trainer edits survive unless reset_trainer."""
     Base.metadata.create_all(db.get_bind())
+    columns = {c["name"] for c in inspect(db.get_bind()).get_columns("pokemon")}
+    if "go" not in columns:  # databases built before the GO data existed
+        db.execute(text("ALTER TABLE pokemon ADD COLUMN go JSON"))
     keep_trainer = not reset_trainer and db.query(models.Trainer).count() > 0
 
     for table in [models.Encounter, models.PokemonMove, models.Move, models.Ability, models.Place,
@@ -60,11 +66,15 @@ def populate(db, folder=PROCESSED, reset_trainer=False):
     db.add_all(models.Ability(**a) for a in load("abilities", folder))
     db.flush()
     move_ids = {m["name"]: m["id"] for m in moves}
+    go = defaultdict(list)  # optional: from scripts/fetch_pokemondb.py
+    if (folder / "go_pokedex.json").exists():
+        for entry in load("go_pokedex", folder):
+            go[entry["id"]].append({k: v for k, v in entry.items() if k not in ("id", "species", "slug")})
 
     for p in load("pokemon", folder):
         learnset = p.pop("moves")
         p.pop("variety")
-        row = models.Pokemon(**p)
+        row = models.Pokemon(**p, go=go.get(p["id"]))
         row.moves = [models.PokemonMove(move_id=move_ids[m["move"]], method=m["method"], level=m["level"])
                      for m in learnset if m["move"] in move_ids]
         db.add(row)

@@ -46,9 +46,10 @@ Mobile: [scanner](docs/screenshots/scanner-mobile.png), [trainer](docs/screensho
 ```mermaid
 flowchart LR
     subgraph Offline["Offline pipeline (scripts/)"]
-        A[PokéAPI] -->|fetch_data.py<br/>retry + rate limit + cache| B[(data/processed JSON<br/>+ 10k images)]
+        A[PokéAPI] -->|fetch_data.py<br/>retry + rate limit + cache| B[(data/processed JSON<br/>+ images)]
+        P[pokemondb.net GO] -->|fetch_pokemondb.py<br/>GO stats + image styles| B
         B -->|load_db.py| C[(SQLite)]
-        B -->|train.py<br/>MobileNetV2 transfer learning| D[pokemon_cnn.pt]
+        B -->|prepare_dataset.py + train.py<br/>EfficientNet-B0, partial views| D[pokemon_cnn.pt]
         D -->|ONNX export| E[pokemon_cnn.onnx]
         C -->|export_static.py| F[static JSON]
     end
@@ -80,25 +81,25 @@ The frontend runs in two modes:
 
 ## Model results
 
-Training: about 10 images per Pokémon (official artwork, HOME renders, and sprites from Gen 2 to 7
-games, normal and shiny), augmented with random backgrounds, crops, rotation, flips,
-brightness/contrast/hue jitter and blur. One image per Pokémon is held out for validation.
-MobileNetV2 (ImageNet weights) at 160 px. The head trains first, then the whole network is
-fine-tuned with a cosine learning-rate schedule and label smoothing.
+Training: about 45,000 images. PokéAPI sprites from every game generation, including animated frames;
+Pokémon GO, HOME, Scarlet/Violet, BDSP and Sword/Shield sprites plus large artwork and alternate
+forms scraped from [pokemondb.net](https://pokemondb.net/go/pokedex); and 6,000 public-domain
+real-world images of Gen 1 Pokémon. Half of the training samples are **partial views** that keep only
+15–90% of the Pokémon's pixels. The rest get random backgrounds, crops, rotation, colour jitter, blur,
+low resolution and JPEG damage. EfficientNet-B0 (ImageNet weights) at 224 px, AdamW with a one-cycle
+schedule and label smoothing. One sprite style per Pokémon is held out for testing.
 
-| Metric (via the deployed ONNX pipeline) | Result |
-|---|---|
-| Classes | 1,025 Pokémon (Gen 1 to 9) |
-| Held-out top-1 accuracy | **97.5%** (1,025 unseen images) |
-| Held-out top-3 accuracy | **99.2%** |
-| Share of predictions above the 50% "sure" threshold | 86.3% |
-| Accuracy when the model says it's sure | 99.7% |
-| Showdown sprite set (not in training folders) | 98.3% top-1, 99.3% top-3 |
-| Model size / training time | 13.5 MB ONNX / about 18 minutes on an RTX 5050 laptop GPU |
+| Test set (via the deployed ONNX pipeline) | Top-1 | Top-3 |
+|---|---|---|
+| Unseen sprite style, 1,025 images | **99.8%** | 100.0% |
+| Same images cropped, low-res, blurred, JPEG | **99.9%** | 100.0% |
+| **Only 30% of the Pokémon visible**, 3,075 crops of unseen styles | **97.6%** | 99.2% |
+| Real world (fan art, cards, toys, photos; Gen 1), 732 images | **90.4%** | 95.0% |
+| Real world with 30% of the subject visible | 79.1% | 88.5% |
+| Model size / training time | 20 MB ONNX / about 35 minutes on an RTX 5050 laptop GPU | |
 
-An honest caveat: the held-out and Showdown images are still game sprites and official art, so these
-numbers describe that domain. Photos of toys, cards, screenshots and fan art have **not** been
-measured and will score lower. Adding a Kaggle photo dataset is the next step.
+"30% visible" means the crop contains 30% of the Pokémon's own pixels, not 30% of the image area.
+Real-world photos exist only for Gen 1, and partial views of them are the weakest case.
 
 ![Training curves](docs/results/training_curves.png)
 
@@ -151,7 +152,9 @@ Re-create everything from scratch (optional, about 15 minutes of downloads plus 
 .\.venv\Scripts\pip.exe install torch==2.11.0 torchvision==0.26.0 --index-url https://download.pytorch.org/whl/cu128   # or /whl/cpu
 .\.venv\Scripts\pip.exe install -r requirements-train.txt
 .\.venv\Scripts\python.exe scripts\fetch_data.py         # --max-id 649 for Gen 1-5 only
+.\.venv\Scripts\python.exe scripts\fetch_pokemondb.py    # GO stats + extra image styles (about 45 min, rate-limited)
 .\.venv\Scripts\python.exe scripts\load_db.py
+.\.venv\Scripts\python.exe scripts\prepare_dataset.py    # training cache + test sets (incl. 30%-visible crops)
 .\.venv\Scripts\python.exe scripts\train.py              # add --cpu without a GPU
 .\.venv\Scripts\python.exe scripts\evaluate.py
 .\.venv\Scripts\python.exe scripts\export_static.py      # refresh the serverless build data
@@ -195,8 +198,11 @@ backend/app/
 backend/tests/     API, identification (real model on a real image) and chat-loop tests, plus fixtures
 scripts/
   fetch_data.py    PokéAPI downloader: retries, rate limit, cache, images to data/images/<name>/
+  fetch_pokemondb.py  pokemondb.net/go/pokedex scraper: GO stats/moves per form, GO/HOME/SV/BDSP sprites, artwork
   load_db.py       Builds SQLite from processed JSON and seed data
-  train.py         Transfer-learning training, augmentation, curves, ONNX export
+  prepare_dataset.py  Training cache, held-out splits, hard and 30%-visible test sets
+  partial_view.py  Crops that keep a chosen share of the Pokémon's pixels (training + 30%-visible test)
+  train.py         Transfer-learning training, augmentation incl. partial views, curves, ONNX export
   evaluate.py      Held-out and out-of-distribution evaluation, confusion matrix, report
   export_static.py Writes JSON and the model for the serverless frontend
   make_test_fixtures.py  Small committed data subset for CI

@@ -1,70 +1,94 @@
 {
-  "images": 1025,
-  "classes": 1025,
-  "top1": 0.9746,
-  "top3": 0.9922,
-  "confident_share": 0.8634,
-  "precision_when_confident": 0.9966,
-  "by_generation": {
-    "1": 0.9669,
-    "2": 0.99,
-    "3": 0.9778,
-    "4": 0.972,
-    "5": 0.9679,
-    "6": 0.9861,
-    "7": 0.9886,
-    "8": 1.0,
-    "9": 0.9417
+  "model": {
+    "clean": {
+      "images": 1025,
+      "top1": 0.998,
+      "top3": 1.0,
+      "sure_share": 0.9844,
+      "precision_when_sure": 0.999
+    },
+    "hard": {
+      "images": 1025,
+      "top1": 0.999,
+      "top3": 1.0,
+      "sure_share": 0.9844,
+      "precision_when_sure": 0.999
+    },
+    "partial30": {
+      "images": 3075,
+      "top1": 0.9763,
+      "top3": 0.9915,
+      "sure_share": 0.9382,
+      "precision_when_sure": 0.9951
+    },
+    "real": {
+      "images": 732,
+      "top1": 0.9044,
+      "top3": 0.9495,
+      "sure_share": 0.709,
+      "precision_when_sure": 0.9884
+    },
+    "real_partial30": {
+      "images": 732,
+      "top1": 0.791,
+      "top3": 0.8852,
+      "sure_share": 0.6202,
+      "precision_when_sure": 0.9515
+    },
+    "uploads": [
+      {
+        "file": "user_nidoran_f.png",
+        "expected": "nidoran-f",
+        "predicted": "nidoran-f",
+        "confidence": 0.5535,
+        "correct": true
+      }
+    ]
   },
-  "by_image_kind": {
-    "artwork_shiny": {
-      "top1": 0.9914,
-      "n": 116
+  "baseline_v1": {
+    "clean": {
+      "images": 1025,
+      "top1": 0.9863,
+      "top3": 0.9932,
+      "sure_share": 0.8702,
+      "precision_when_sure": 0.9989
     },
-    "bw": {
-      "top1": 1.0,
-      "n": 131
+    "hard": {
+      "images": 1025,
+      "top1": 0.9532,
+      "top3": 0.9795,
+      "sure_share": 0.6585,
+      "precision_when_sure": 0.9985
     },
-    "crystal": {
-      "top1": 0.9474,
-      "n": 19
+    "partial30": {
+      "images": 3075,
+      "top1": 0.5203,
+      "top3": 0.6767,
+      "sure_share": 0.0361,
+      "precision_when_sure": 0.982
     },
-    "emerald": {
-      "top1": 1.0,
-      "n": 44
+    "real": {
+      "images": 732,
+      "top1": 0.776,
+      "top3": 0.8443,
+      "sure_share": 0.291,
+      "precision_when_sure": 1.0
     },
-    "home": {
-      "top1": 1.0,
-      "n": 108
+    "real_partial30": {
+      "images": 732,
+      "top1": 0.4672,
+      "top3": 0.582,
+      "sure_share": 0.0546,
+      "precision_when_sure": 1.0
     },
-    "home_shiny": {
-      "top1": 1.0,
-      "n": 115
-    },
-    "platinum": {
-      "top1": 1.0,
-      "n": 44
-    },
-    "sprite": {
-      "top1": 1.0,
-      "n": 141
-    },
-    "sprite_back": {
-      "top1": 0.85,
-      "n": 120
-    },
-    "sprite_shiny": {
-      "top1": 1.0,
-      "n": 112
-    },
-    "xy": {
-      "top1": 0.92,
-      "n": 75
-    }
-  },
-  "external_showdown": {
-    "images": 300,
-    "top1": 0.9833,
-    "top3": 0.9933
+    "uploads": [
+      {
+        "file": "user_nidoran_f.png",
+        "expected": "nidoran-f",
+        "predicted": "nidoran-f",
+        "confidence": 0.4786,
+        "correct": true
+      }
+    ]
   }
 }

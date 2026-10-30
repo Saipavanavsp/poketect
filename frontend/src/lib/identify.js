@@ -76,6 +76,18 @@ export function preprocess(img, size) {
   return tensor
 }
 
+/** Horizontally flip a CHW tensor. */
+export function mirror(x, size) {
+  const out = new Float32Array(x.length)
+  for (let c = 0; c < 3; c++) {
+    for (let y = 0; y < size; y++) {
+      const row = c * size * size + y * size
+      for (let i = 0; i < size; i++) out[row + i] = x[row + size - 1 - i]
+    }
+  }
+  return out
+}
+
 export function softmaxTop(logits, k) {
   const max = Math.max(...logits)
   const exps = Array.from(logits, (v) => Math.exp(v - max))
@@ -91,9 +103,17 @@ export async function identify(file) {
   const url = URL.createObjectURL(file)
   try {
     const [{ ort, session, labels }, img, index] = await Promise.all([loadSession(), loadImage(url), listPokemon()])
-    const input = new ort.Tensor('float32', preprocess(img, labels.img_size), [1, 3, labels.img_size, labels.img_size])
-    const output = await session.run({ [session.inputNames[0]]: input })
-    const top = softmaxTop(output[session.outputNames[0]].data, 3)
+    const size = labels.img_size
+    const x = preprocess(img, size)
+    // Test-time augmentation, same as the server: the image plus its mirror, logits averaged.
+    const batch = new Float32Array(x.length * 2)
+    batch.set(x)
+    batch.set(mirror(x, size), x.length)
+    const output = await session.run({ [session.inputNames[0]]: new ort.Tensor('float32', batch, [2, 3, size, size]) })
+    const raw = output[session.outputNames[0]].data
+    const classes = raw.length / 2
+    const logits = Float32Array.from({ length: classes }, (_, i) => (raw[i] + raw[classes + i]) / 2)
+    const top = softmaxTop(logits, 3)
     const byName = new Map(index.map((p) => [p.name, p]))
     const predictions = top.map(([i, p]) => ({
       name: labels.classes[i],

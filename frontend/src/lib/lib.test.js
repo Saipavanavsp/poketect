@@ -45,7 +45,15 @@ vi.mock('./api', () => {
 })
 
 const { distanceKm, nearest, toLatLng, fromLatLng } = await import('./geo')
-const { softmaxTop } = await import('./identify')
+const { softmaxTop, mirror } = await import('./identify')
+
+describe('mirror', () => {
+  it('flips each row of every channel', () => {
+    // 3 channels of a 2x2 image: rows [1,2],[3,4] per channel
+    const x = new Float32Array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
+    expect(Array.from(mirror(x, 2))).toEqual([2, 1, 4, 3, 6, 5, 8, 7, 10, 9, 12, 11])
+  })
+})
 const { sendMessage } = await import('./assistant')
 
 describe('geo', () => {

@@ -1,46 +1,27 @@
 # Model evaluation
 
-Held-out set: **1025 images**, one unseen image per Pokémon across **1025 classes**.
+Model: **efficientnet_b0** at 224 px, 1025 classes. All numbers come from the ONNX model run through the same code as `POST /api/identify`.
 
-| Metric | Value |
-|---|---|
-| Top-1 accuracy | 97.5% |
-| Top-3 accuracy | 99.2% |
-| Predictions above 50% confidence | 86.3% |
-| Accuracy of those confident predictions | 99.7% |
+| Test set | Images | v1 top-1 | v1 top-3 | v2 top-1 | v2 top-3 |
+|---|---|---|---|---|---|
+| Clean: one unseen sprite style per Pokémon | 1025 | 98.6% | 99.3% | **99.8%** | **100.0%** |
+| Hard: same images cropped, low-res, blurred, JPEG | 1025 | 95.3% | 98.0% | **99.9%** | **100.0%** |
+| **30% visible**: clean images, only 30% of the Pokémon shown | 3075 | 52.0% | 67.7% | **97.6%** | **99.2%** |
+| Real world: fan art, cards, toys, photos (Gen 1) | 732 | 77.6% | 84.4% | **90.4%** | **95.0%** |
+| Real world, 30% of the subject shown | 732 | 46.7% | 58.2% | **79.1%** | **88.5%** |
 
-## Different sprite set
+**30%-visible target (90% top-1): met** (97.6% on 3075 crops of unseen sprite styles).
 
-300 Pokémon Showdown sprites (first animation frame), a sprite set not in the training folders: **top-1 98.3%, top-3 99.3%**. Many Showdown sprites are animated versions of game sprites the model did see, so this is not a real-world test. Photos, toys, cards and fan art have not been measured and will score lower; see docs/IMPROVING_ACCURACY.md.
+v1 was MobileNetV2 trained on clean sprites only. v2 adds animated-sprite frames and more game styles, public-domain real-world images for Gen 1, Pokémon GO / HOME / Scarlet-Violet styles and alternate forms from pokemondb.net, partial-view training (crops keeping 15-90% of the Pokémon), class-balanced sampling and heavy low-quality augmentation.
 
-## By generation
+When v2 says it is sure (above 50%), it is right 98.8% of the time on real-world images and 99.9% on hard ones.
 
-| Gen | Top-1 |
-|---|---|
-| 1 | 96.7% |
-| 2 | 99.0% |
-| 3 | 97.8% |
-| 4 | 97.2% |
-| 5 | 96.8% |
-| 6 | 98.6% |
-| 7 | 98.9% |
-| 8 | 100.0% |
-| 9 | 94.2% |
+## Reported uploads
 
-## By held-out image style
+| File | Expected | v2 prediction | Confidence |
+|---|---|---|---|
+| user_nidoran_f.png | nidoran-f | nidoran-f ✓ | 55% |
 
-| Style | Images | Top-1 |
-|---|---|---|
-| artwork_shiny | 116 | 99.1% |
-| bw | 131 | 100.0% |
-| crystal | 19 | 94.7% |
-| emerald | 44 | 100.0% |
-| home | 108 | 100.0% |
-| home_shiny | 115 | 100.0% |
-| platinum | 44 | 100.0% |
-| sprite | 141 | 100.0% |
-| sprite_back | 120 | 85.0% |
-| sprite_shiny | 112 | 100.0% |
-| xy | 75 | 92.0% |
+Real-world images exist only for Gen 1 in the public dataset, so later generations are tested on sprites (clean and hard sets) only.
 
 ![Confusion matrix](confusion_matrix.png)

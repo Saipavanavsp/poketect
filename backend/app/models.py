@@ -27,6 +27,7 @@ class Pokemon(Base):
     evolution_chain_id: Mapped[int | None] = mapped_column(ForeignKey("evolution_chains.id"), nullable=True)
     evolves_from: Mapped[str | None] = mapped_column(String(64), nullable=True)
     images: Mapped[dict] = mapped_column(JSON)
+    go: Mapped[list | None] = mapped_column(JSON, nullable=True)  # Pokémon GO forms, from pokemondb.net
 
     moves: Mapped[list["PokemonMove"]] = relationship(back_populates="pokemon", cascade="all, delete-orphan")
 

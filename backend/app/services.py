@@ -123,7 +123,7 @@ def detail(db: Session, p: models.Pokemon) -> dict:
                        "effect": abilities[a["name"]].effect if a["name"] in abilities else ""} for a in p.abilities],
         "stats": p.stats, "description": p.description, "color": p.color, "habitat": p.habitat,
         "is_legendary": p.is_legendary, "is_mythical": p.is_mythical, "capture_rate": p.capture_rate,
-        "evolves_from": p.evolves_from, "images": p.images,
+        "evolves_from": p.evolves_from, "images": p.images, "go": p.go or [],
         "moves": moves_for(db, p),
         "evolution": evolution_for(db, p),
         "encounters": encounters_for(db, p),

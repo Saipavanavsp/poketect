@@ -227,6 +227,37 @@ function Habitats({ encounters }) {
   )
 }
 
+function moveList(moves) {
+  return moves.map((m) => (m.special ? `${m.name} (${m.special})` : m.name)).join(', ') || '—'
+}
+
+/** Pokémon GO stats per form, scraped from pokemondb.net/go/pokedex. */
+function GoTable({ forms }) {
+  return (
+    <div className="overflow-x-auto">
+      <table className="w-full text-left text-[16px]">
+        <thead className="font-display text-ink-soft">
+          <tr><th className="pr-4">Form</th><th className="pr-4">Attack</th><th className="pr-4">Defense</th><th className="pr-4">HP</th><th className="pr-4">Catch</th><th className="pr-4">Flee</th><th className="pr-4">Fast moves</th><th>Charge moves</th></tr>
+        </thead>
+        <tbody>
+          {forms.map((f) => (
+            <tr key={f.form || 'base'} className="border-t border-shell/30 align-top">
+              <td className="pr-4 py-1">{f.form || f.name}</td>
+              <td className="num pr-4">{f.attack}</td>
+              <td className="num pr-4">{f.defense}</td>
+              <td className="num pr-4">{f.stamina}</td>
+              <td className="num pr-4">{f.catch_rate == null ? '—' : `${f.catch_rate}%`}</td>
+              <td className="num pr-4">{f.flee_rate == null ? '—' : `${f.flee_rate}%`}</td>
+              <td className="pr-4">{moveList(f.fast_moves)}</td>
+              <td>{moveList(f.charge_moves)}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  )
+}
+
 function Section({ title, children }) {
   return (
     <section className="mt-8">
@@ -280,6 +311,7 @@ export default function PokemonEntry({ pokemon: p }) {
         <Section title="Base stats"><StatsChart stats={p.stats} /></Section>
         <Section title="Evolution"><EvolutionChain chain={p.evolution} current={p.name} /></Section>
       </div>
+      {p.go?.length > 0 && <Section title="Pokémon GO"><GoTable forms={p.go} /></Section>}
       <Section title="Attacks"><MovesTable key={p.id} moves={p.moves} /></Section>
       <Section title="Where to find it"><Habitats encounters={p.encounters} /></Section>
     </article>
