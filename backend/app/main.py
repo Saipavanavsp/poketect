@@ -13,7 +13,7 @@ from .seed_data import REGIONS
 
 Base.metadata.create_all(engine)
 
-app = FastAPI(title="PokéDex AI API", version="1.0.0",
+app = FastAPI(title="Poketect API", version="1.0.0",
               description="Fan project, not for commercial use. Data from PokéAPI (https://pokeapi.co).")
 app.add_middleware(CORSMiddleware, allow_origins=CORS_ORIGINS, allow_methods=["*"], allow_headers=["*"])
 

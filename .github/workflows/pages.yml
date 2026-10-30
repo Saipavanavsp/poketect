@@ -31,7 +31,7 @@ jobs:
       - run: npm ci
       - run: npm run build
         env:
-          BASE_PATH: /pokedex-ai/
+          BASE_PATH: /poketect/
           VITE_API_URL: ${{ vars.VITE_API_URL }}
       - uses: actions/upload-pages-artifact@v3
         with:

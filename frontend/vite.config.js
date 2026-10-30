@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// BASE_PATH is "/pokedex-ai/" for GitHub Pages, "/" everywhere else.
+// BASE_PATH is "/poketect/" for GitHub Pages, "/" everywhere else.
 export default defineConfig({
   plugins: [react()],
   base: process.env.BASE_PATH || '/',

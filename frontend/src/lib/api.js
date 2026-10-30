@@ -3,7 +3,8 @@
 const API = (import.meta.env.VITE_API_URL || '').replace(/\/$/, '')
 export const hasBackend = Boolean(API)
 const BASE = import.meta.env.BASE_URL
-const TRAINER_KEY = 'pokedex-ai.trainer.v1'
+const TRAINER_KEY = 'poketect.trainer.v1'
+const OLD_TRAINER_KEY = 'pokedex-ai.trainer.v1' // saved before the rename to Poketect
 const cache = new Map()
 
 async function getJSON(url, { fresh = false } = {}) {
@@ -83,7 +84,7 @@ export async function pokemonAtPlace(region, slug) {
 
 function readLocalTrainer() {
   try {
-    return JSON.parse(localStorage.getItem(TRAINER_KEY) || 'null')
+    return JSON.parse(localStorage.getItem(TRAINER_KEY) || localStorage.getItem(OLD_TRAINER_KEY) || 'null')
   } catch {
     return null
   }
@@ -153,6 +154,7 @@ export async function updateTeamMember(memberId, changes) {
 export async function resetTrainer() {
   try {
     localStorage.removeItem(TRAINER_KEY)
+    localStorage.removeItem(OLD_TRAINER_KEY)
   } catch {
     /* ignore */
   }

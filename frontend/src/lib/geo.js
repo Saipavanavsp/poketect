@@ -17,12 +17,13 @@ export function nearest(items, x, y, limit = 3) {
     .slice(0, limit)
 }
 
-const LOCATION_KEY = 'pokedex-ai.location.v1'
+const LOCATION_KEY = 'poketect.location.v1'
+const OLD_LOCATION_KEY = 'pokedex-ai.location.v1' // saved before the rename to Poketect
 export const DEFAULT_LOCATION = { region: 'kanto', x: 230, y: 580, label: 'Pallet Town' }
 
 export function loadLocation() {
   try {
-    return JSON.parse(localStorage.getItem(LOCATION_KEY)) || DEFAULT_LOCATION
+    return JSON.parse(localStorage.getItem(LOCATION_KEY) || localStorage.getItem(OLD_LOCATION_KEY)) || DEFAULT_LOCATION
   } catch {
     return DEFAULT_LOCATION
   }

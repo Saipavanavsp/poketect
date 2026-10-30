@@ -1,10 +1,10 @@
-# PokéDex AI
+# Poketect
 
 A working Pokédex: point it at a picture and a neural network identifies the Pokémon, then shows its
 stats, attacks, evolution chain and where to find it. You can also talk to it by voice. It answers
 from its own database through Claude tool calls.
 
-**Live demo:** https://saipavanavsp.github.io/pokedex-ai/
+**Live demo:** https://saipavanavsp.github.io/poketect/
 **Author:** Sai Pavan
 
 ![Scanner identifying Pikachu](docs/screenshots/scanner.png)
@@ -124,8 +124,8 @@ matrix of the most-confused classes is in
 Prerequisites: Python 3.12, Node 20+. A GPU is optional.
 
 ```powershell
-git clone https://github.com/Saipavanavsp/pokedex-ai.git
-cd pokedex-ai
+git clone https://github.com/Saipavanavsp/poketect.git
+cd poketect
 python -m venv .venv
 .\.venv\Scripts\pip.exe install -r requirements.txt
 

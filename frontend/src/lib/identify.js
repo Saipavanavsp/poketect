@@ -127,7 +127,7 @@ export async function identify(file) {
   }
 }
 
-const LAST_KEY = 'pokedex-ai.last-scan'
+const LAST_KEY = 'poketect.last-scan'
 export function saveLastScan(result) {
   try {
     sessionStorage.setItem(LAST_KEY, JSON.stringify({

@@ -64,7 +64,7 @@ def make_session() -> requests.Session:
                   allowed_methods=["GET"], respect_retry_after_header=True)
     adapter = HTTPAdapter(max_retries=retry, pool_connections=16, pool_maxsize=16)
     session.mount("https://", adapter)
-    session.headers["User-Agent"] = "pokedex-ai-fan-project/1.0 (educational)"
+    session.headers["User-Agent"] = "poketect-fan-project/1.0 (educational)"
     return session
 
 

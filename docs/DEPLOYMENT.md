@@ -1,6 +1,6 @@
 # Deployment guide
 
-PokéDex AI deploys in two independent pieces. The frontend works on its own; adding the backend
+Poketect deploys in two independent pieces. The frontend works on its own; adding the backend
 unlocks Claude-powered conversation and saves trainer edits to the database.
 
 | Piece | Where | What you get |
@@ -10,7 +10,7 @@ unlocks Claude-powered conversation and saves trainer edits to the database.
 
 ## 1. Frontend on GitHub Pages (current live site)
 
-`.github/workflows/pages.yml` builds `frontend/` with `BASE_PATH=/pokedex-ai/` and publishes it on
+`.github/workflows/pages.yml` builds `frontend/` with `BASE_PATH=/poketect/` and publishes it on
 every push to `main`. One-time setup: **Settings > Pages > Source: GitHub Actions**.
 
 To point the live site at a deployed backend, add a repository variable:

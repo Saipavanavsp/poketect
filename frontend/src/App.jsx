@@ -28,7 +28,7 @@ function DeviceHeader() {
           <span className="h-3 w-3 rounded-full bg-paper-edge ring-1 ring-black/20" />
         </div>
         <NavLink to="/" className="font-display text-[28px] font-bold leading-none text-paper-soft sm:text-[32px]">
-          PokéDex AI
+          Poketect
         </NavLink>
         <nav className="ml-auto hidden gap-1 md:flex" aria-label="Main">
           {NAV.map(([to, label]) => (
